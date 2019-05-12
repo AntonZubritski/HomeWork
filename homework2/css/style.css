@@ -1,0 +1,38 @@
+table{
+    margin: 10px 0;
+    text-align: center;
+    border-collapse: separate;
+    border: 1px solid #ddd;
+    border-spacing: 80px;
+    background: #fdfdfd;
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+}
+td,th{
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+th{
+    background: #E4E4E4;
+}
+caption{
+    font-style: italic;
+    text-align: right;
+    color: #547901;
+}
+tr{
+    width: 100%;
+}
+.one{
+    background:chartreuse;
+}
+.two{
+    background:darkorange;
+}
+.three{
+    background:blue;
+}
+.four{
+    background:darkgrey;
+}
