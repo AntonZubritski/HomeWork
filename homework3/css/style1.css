@@ -1,0 +1,168 @@
+@media screen and (max-device-width: 667px) {
+    .wrapper {
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+    }
+    .wrapper .header {
+        display: inline-block;
+        position: absolute;
+        height: 25%;
+        width: 98.5%;
+        top: 53%;
+    }
+    .wrapper .header .lefthead {
+        display: none;
+        width: 100%;
+        height: 25%;
+        background-color: darkorange;
+    }
+    .wrapper .header .righthead {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background-color: brown;
+    }
+    .wrapper .content {
+        display: inline-block;
+        height: 25%;
+        width: 100%;
+        background-color: chartreuse;
+        border: black 2px solid;
+    }
+
+    .wrapper .sidebar {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 25%;
+        float: left;
+        border: black 2px solid;
+    }
+
+    .side1 {
+        display: inline-block;
+        height: 25%;
+        text-align: center;
+    }
+
+    .wrapper .side1, #SB3 {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        margin: 0 0 0 0;
+        float: left;
+    }
+
+    .side1, #SB2 {
+        display: none;
+    }
+
+    .side1, #SB1 {
+        display: none;
+    }
+}
+@media only screen and (max-device-width: 1024px) and (min-device-width: 668px){
+
+    .wrapper .header {
+        position: absolute;
+        width: 50%;
+        height: 10%;
+        bottom: 680px;
+    }
+    .header .lefthead {
+        position: absolute;
+        display: inherit;
+        width: 500px;
+        height: 46px;
+        background-color: darkorange;
+    }
+
+    .header .righthead {
+        position: absolute;
+        display: inherit;
+        width: 197%;
+        height: 420%;
+        margin-top: 100px;
+        background-color: brown;
+    }
+    .wrapper .sidebar {
+        position: absolute;
+        display: inherit;
+        width: 50%;
+        height: 10%;
+        bottom: 672px;
+        margin-left: 50%;
+
+    }
+     .sidebar #SB3 {
+         position: relative;
+         display: inherit;
+         width: 500px;
+         height: 75px;
+         bottom: 697px;
+
+    }
+    .sidebar #SB2 {
+        display: inherit;
+        width: 97%;
+        height: 200px;
+        margin-top: 499px;
+
+    }
+    .sidebar #SB1 {
+        display: none;
+    }
+    .wrapper .content{
+        display: block;
+        position: fixed;
+        height: 200px;
+        width: 49%;
+        background-color: #547901;
+        margin: 500px 0 0 0;
+        float: left;
+    }
+}
+    .wrapper{
+    width: 100%;
+    height: 98vh;
+    text-align: center;
+}
+.header{
+    position: relative;
+    height: 120px;
+    width: 100%;
+}
+.lefthead{
+    float: left;
+    width: 49%;
+    text-align: center;
+    padding: 3% 0 3% 0;
+    background-color: darkorange;
+}
+.righthead{
+    float: right;
+    width: 49%;
+    text-align: center;
+    padding: 3% 0 3% 0;
+    background-color: brown;
+}
+.content{
+    height: 500px;
+    background-color: #547901;
+}
+.sidebar{
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+}
+.side1{
+    display: inline-block;
+    width: 33%;
+    height: 200px;
+    margin: 0 -1px ;
+    text-align: center;
+}
+#SB1{    background-color: chocolate;}
+#SB2{    background-color: blue;}
+#SB3{    background-color: blueviolet;}
