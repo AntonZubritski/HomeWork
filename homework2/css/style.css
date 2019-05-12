@@ -1,9 +1,11 @@
+body{
+}
 table{
     margin: 10px 0;
     text-align: center;
     border-collapse: separate;
     border: 1px solid #ddd;
-    border-spacing: 80px;
+    border-spacing: 70px;
     background: #fdfdfd;
     font-size: 14px;
     width: 100%;

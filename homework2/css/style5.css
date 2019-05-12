@@ -2,8 +2,12 @@ body{
     height: 100%;
     text-align: center;
     background-image: url("../img/kEOv.jpg");
+    -webkit-background-image: url("../img/kEOv.jpg");
+    -moz-background-image:url("../img/kEOv.jpg");
     background-repeat: no-repeat;
     background-size: auto;
+    -moz-background-size: auto;
+    -webkit-background-size: auto;
 }
 .header{
     position: fixed;
@@ -18,6 +22,7 @@ body{
 .header:hover {
     background-color: rgba(0, 0, 0, 0.9) ;
     -webkit-animation:appear 3s ease 0s 1 normal;
+    -moz-animation: appear 3s ease 0s 1 normal;
     animation:appear 3s ease 0s 1 normal;
     opacity: 0.8;
 }
@@ -29,6 +34,7 @@ body{
     50% { background-color: rgba(0, 0, 0, 0.6); opacity:0.6;}
     100%{ background-color: rgba(0, 0, 0, 0.8); opacity:0.9;}
 }
+
 #icon1{
     display: inline-block;
     float: left;
@@ -66,6 +72,9 @@ body{
     background: -webkit-linear-gradient(90deg, rgba(221,126,101,1) 14%,
     rgba(216,221,201,1) 36%, rgba(159,112,155,1) 66%,
     rgba(163,196,13,0.7) 76%, rgba(0,212,255,1) 100%);
+    background: -moz-linear-gradient(90deg, rgba(221,126,101,1) 14%,
+    rgba(216,221,201,1) 36%, rgba(159,112,155,1) 66%,
+    rgba(163,196,13,0.7) 76%, rgba(0,212,255,1) 100%);
     opacity: 1;
     background-clip: content-box;
     -webkit-background-clip: text;
@@ -80,12 +89,18 @@ body{
         rgba(163,196,13,0) 76%, rgba(0,212,255,0) 100%);
         background: -webkit-linear-gradient(90deg, rgba(221,126,101,0) 14%,
         rgba(216,221,201,0) 36%, rgba(159,112,155,0) 66%,
+        rgba(163,196,13,0) 76%, rgba(0,212,255,0) 100%);
+        background: -moz-linear-gradient(90deg, rgba(221,126,101,0) 14%,
+        rgba(216,221,201,0) 36%, rgba(159,112,155,0) 66%,
         rgba(163,196,13,0) 76%, rgba(0,212,255,0) 100%);opacity:0}
     50% {background: rgba(221,126,101,0.5);
         background: linear-gradient(90deg, rgba(221,126,101,0.5) 14%,
         rgba(216,221,201,0.5) 36%, rgba(159,112,155,0.5) 66%,
         rgba(163,196,13,0.5) 76%, rgba(0,212,255,0.5) 100%);
         background: -webkit-linear-gradient(90deg, rgba(221,126,101,0.5) 14%,
+        rgba(216,221,201,0.5) 36%, rgba(159,112,155,0.5) 66%,
+        rgba(163,196,13,0.5) 76%, rgba(0,212,255,0.5) 100%);
+        background: -moz-linear-gradient(90deg, rgba(221,126,101,0.5) 14%,
         rgba(216,221,201,0.5) 36%, rgba(159,112,155,0.5) 66%,
         rgba(163,196,13,0.5) 76%, rgba(0,212,255,0.5) 100%);opacity:0.5}
     100% {background: rgba(221,126,101,1);
@@ -94,15 +109,18 @@ body{
         rgba(163,196,13,0.7) 76%, rgba(0,212,255,1) 100%);
         background: -webkit-linear-gradient(90deg, rgba(221,126,101,1) 14%,
         rgba(216,221,201,1) 36%, rgba(159,112,155,1) 66%,
-        rgba(163,196,13,0.7) 76%, rgba(0,212,255,1) 100%);opacity: 1}}
+        rgba(163,196,13,0.7) 76%, rgba(0,212,255,1) 100%);
+        background: -moz-linear-gradient(90deg, rgba(221,126,101,1) 14%,
+        rgba(216,221,201,1) 36%, rgba(159,112,155,1) 66%,
+        rgba(163,196,13,0.7) 76%, rgba(0,212,255,1) 100%);opacity: 1;}}
 
 #icon1 img{
-    width: 80px;
-    height:80px;
+    width: 70px;
+    height:70px;
 }
 #icon2 img{
-    width: 80px;
-    height:80px;
+    width: 70px;
+    height:70px;
 }
 .content{
     margin: 10% -6px 0 -6px ;
@@ -126,7 +144,10 @@ body{
     height: 450px;
     margin: 10px 5px 10px 5px;
     box-shadow: rgba(100,100,100,1) 20px 20px 10px 0;
+    -webkit-box-shadow: rgba(100,100,100,1) 20px 20px 10px 0;
+    -moz-box-shadow: rgba(100,100,100,1) 20px 20px 10px 0;
     -webkit-animation:colomn 3s ease 0s 1 normal;
+    -moz-animation:colomn 3s ease 0s 1 normal;
     animation:colomn 3s ease 0s 1 normal;
 }
 @-webkit-keyframes colomn{

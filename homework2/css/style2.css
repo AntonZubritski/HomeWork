@@ -3,7 +3,10 @@
     height: 98vh;
 }
 header{
+    display: flex;
+    justify-content: space-between;
     position: relative;
+    margin-bottom: 10px;
     height: 120px;
     width: 100%;
 }
@@ -43,7 +46,8 @@ a{
     font-size: 30px;
 }
 .sidebar{
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     padding: 10px 0;
     text-align: center;
@@ -58,7 +62,9 @@ a{
     background-color: blue;
 }
 footer {
+    display: flex;
     position: absolute;
+    justify-content: space-around;
     height: 60px;
     width: 100%;
     text-align: center;
