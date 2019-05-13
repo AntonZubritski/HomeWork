@@ -12,13 +12,13 @@ header{
     height: 10%;
     bottom: 90%;
     padding: 35px 0 0 0;
-    float: left;
     background-color: darkgrey;
-    font-size: 70px;
+    font-size: 50px;
 }
 .content{
-    display: block;
+    display: flex;
     position: fixed;
+    justify-content: center;
     border: black 1px solid;
     width: 1080px;
     height: 300px;
@@ -26,7 +26,7 @@ header{
     margin: 0 0 0 -540px;
     top: 30%;
     background-color: darkgrey;
-    padding: 20px 0 0 0;
+    align-items: center;
     font-size: 50px;
 }
 footer{
