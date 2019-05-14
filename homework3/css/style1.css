@@ -1,4 +1,9 @@
 @media screen and (max-device-width: 667px) {
+    body{
+        background-image: url("../pic/sky.png") ;
+        -webkit-background-image: url("../pic/sky.png");
+        background-size: cover;
+    }
     .wrapper .lefthead {
         display: none;
     }
@@ -9,7 +14,6 @@
     .wrapper .content {
         height: 25%;
         width: 100%;
-        border: black 2px solid;
         margin: 0 0;
         order: -2;
     }
@@ -30,12 +34,16 @@
 }
 @media only screen and (max-device-width: 1024px) and (min-device-width: 668px){
 
+    body{
+        background-image: url("../pic/floor.jpg") ;
+        -webkit-background-image: url("../pic/floor.jpg");
+        background-size: cover;
+    }
     .wrapper .lefthead {
         width: 29.5%;
         height: 20vh;
         order: -3;
     }
-
     .wrapper .righthead {
         width: 100%;
         height: 55vh;
@@ -59,11 +67,31 @@
         width: 69.5%;
         order: -1;
     }
+    .texta{
+        display: none;
+    }
+    .content .text{
+        color: rgba(255,255,255,0.7);
+        line-height: 1px;
+        letter-spacing: normal;
+    }
+    .righthead .texta1 {
+        display: inherit;
+    }
+    h3 {
+        font-size: 2em;
+        line-height: 1px;
+        margin: 0.67em 0;
+    }
 }
+@media only screen and (min-device-width: 1025px){
 body{
-    background-image: url("../pic/hangarB.jpg") ;
-    -webkit-background-image: url("../pic/hangarB.jpg");
+    background-image: url("../pic/hangarW.jpg") ;
+    -webkit-background-image: url("../pic/hangarW.jpg");
+    background-size: cover;
 }
+}
+/*--------------------------------------------------Wrapper*/
 .wrapper{
     display: flex;
     flex-wrap: wrap;
@@ -72,67 +100,73 @@ body{
     text-align: center;
     justify-content: space-between;
 }
-/*--------------------------------------------------*/
+/*--------------------------------------------------Lefthead*/
 .lefthead{
     width: 49.5%;
     height: 20%;
     background-color: rgba(255, 190, 133, 0.4);
     -webkit-transition: 1s ease;
+    color: rgba(255,255,255,0.7);
 }
 .lefthead:hover{
     background-color: rgba(255, 190, 133, 0.8);
     animation: shadow  1s linear;
     border: rgba(255, 255, 255, 0.5) 1px solid;
     border-radius: 50px;
+    color: rgba(0,0,0,1);
 
 }
 @keyframes shadow {
     from{background-color: rgba(255, 190, 133, 0.4)}
     to{background-color: rgba(255, 190, 133, 0.8)}
 }
-/*--------------------------------------------------*/
+/*--------------------------------------------------Righthead*/
 .righthead{
     width: 49.5%;
     height: 20%;
     background-color: rgba(175, 109, 135, 0.4);
     -webkit-transition: 1s ease;
+    color: rgba(255,255,255,0.7);
 }
 .righthead:hover{
     background-color: rgba(175, 109, 135, 0.8);
     animation: shadow2  1s linear;
     border: rgba(255, 255, 255, 0.5) 1px solid;
     border-radius: 50px;
+    color: rgba(0,0,0,1);
 }
 @keyframes shadow2 {
     from{background-color: rgba(175, 109, 135, 0.4)}
     to{background-color: rgba(175, 109, 135, 0.8)}
 }
-/*--------------------------------------------------*/
+/*--------------------------------------------------Content*/
 .content{
     width: 100%;
     height: 55%;
     margin: 10px 0;
     background-color: rgba(43, 90, 75, 0.4);
     -webkit-transition: 1s ease;
+    color: rgba(255,255,255,0.7);
 }
 .content:hover{
     background-color: rgba(43, 90, 75, 0.8);
     animation: shadow3  1s linear;
     border: rgba(255, 255, 255, 0.5) 1px solid;
     border-radius: 50px;
+    color: rgba(255,255,255,1);
 }
 @keyframes shadow3 {
     from{background-color: rgba(43, 90, 75, 0.4)}
     to{background-color: rgba(43, 90, 75, 0.8)}
 }
-/*--------------------------------------------------*/
+/*---------------------------------------------------Side*/
 .side{
     display: inline-block;
     width: 32.75%;
     height: 20%;
-    margin: 0 -1px ;
     text-align: center;
     -webkit-transition: 1s ease;
+    color: rgba(255,255,255,0.7);
 }
 /*--------------------------------------------------*/
 #SB1{background-color: rgba(199, 199, 165, 0.4);}
@@ -141,6 +175,7 @@ body{
     animation: shadow4  1s linear;
     border: rgba(255, 255, 255, 0.5) 1px solid;
     border-radius: 50px;
+    color: rgba(0,0,0,1);
 }
 @keyframes shadow4 {
     from{background-color: rgba(199, 199, 165, 0.4)}
@@ -153,6 +188,7 @@ body{
     animation: shadow5  1s linear;
     border: rgba(255, 255, 255, 0.5) 1px solid;
     border-radius: 50px;
+    color: rgba(0,0,0,1);
 }
 @keyframes shadow5 {
     from{background-color: rgba(186, 206, 221, 0.4)}
@@ -165,9 +201,18 @@ body{
     animation: shadow6  1s linear;
     border: rgba(255, 255, 255, 0.5) 1px solid;
     border-radius: 50px;
+    color: rgba(0,0,0,1);
 }
 @keyframes shadow6 {
     from{background-color: rgba(186, 134, 203, 0.4)}
     to{background-color: rgba(186, 134, 203, 0.8)}
 }
-/*--------------------------------------------------*/
+/*---------------------------------------------------Text*/
+.texta1{
+    display: none;
+}
+.text{
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 100px;
+    letter-spacing: 10px;
+}
