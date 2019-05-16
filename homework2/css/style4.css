@@ -1,0 +1,82 @@
+
+body{
+    background-image: url("../img/crm-2013.jpg");
+}
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+header{
+    display: block;
+    position: relative;
+    border: black 3px solid;
+    height: 15%;
+    width: 90%;
+    border-radius: 0 0 50px 50px;
+    -webkit-border-radius:0 0 50px 50px;
+    margin: -15px 5% 0 5%;
+}
+#logo{
+    font-family: "Times New Roman",sans-serif;
+    font-size: 50px;
+    display: block;
+    margin:30px auto;
+
+}
+.content{
+    height: 600px;
+    width: 80%;
+    background-color: rgba(33, 37, 32, 0.3);
+    margin: -20px auto 0 auto;
+    text-align: left;
+}
+img {
+    height: 100px;
+    width: 100px;
+    float: right;
+    position: absolute;
+    margin: -30px 0 auto 650px;
+
+}
+.sidebar{
+    position: fixed;
+    width: 10%;
+    height: 600px;
+    margin-top: -602px;
+    text-align: center;
+    line-height: 120px;
+}
+.side1{
+    position: relative;
+    margin: 7px auto;
+    width: 8vw;
+    height: 120px;
+    text-align: center;
+    background-color: rgba(33, 37, 32, 0.3);
+    border-radius: 50%;
+}
+.side1:hover{
+    background-color: rgba(33, 37, 32, 0.3);
+    border-radius: 30%;
+    animation: sideanim 3s ease 0s 1 normal;
+}
+@-webkit-keyframes sideanim {
+    0% {background-color: white}
+    50%{background-color: rgba(33, 37, 32, 0.3)}
+    100%{ background-color: rgba(33, 37, 32, 0.3)}
+}
+footer {
+    border: black 3px solid;
+    height: 15%;
+    width: 90%;
+    border-radius: 50px 50px 0 0;
+    -webkit-border-radius:50px 50px 0 0 ;
+    margin: 15px 5% 0 5%;
+}
+a{
+    text-decoration: none;
+    font-size: 1.5vw;
+    font-family: "Times New Roman",sans-serif;
+    color: black;
+}

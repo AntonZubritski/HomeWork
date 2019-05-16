@@ -1,0 +1,198 @@
+body{
+    height: 100%;
+    text-align: center;
+    background-image: url("../img/kEOv.jpg");
+    -webkit-background-image: url("../img/kEOv.jpg");
+    -moz-background-image:url("../img/kEOv.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    -moz-background-size: auto;
+    -webkit-background-size: auto;
+}
+.header{
+    position: fixed;
+    height: 10%;
+    width: 100%;
+    background-color: rgba(289,243,243,0.6);
+    margin: 0 -10px 0 -10px;
+    bottom: 90%;
+    text-align: center;
+}
+
+.header:hover {
+    background-color: rgba(0, 0, 0, 0.9) ;
+    -webkit-animation:appear 3s ease 0s 1 normal;
+    -moz-animation: appear 3s ease 0s 1 normal;
+    animation:appear 3s ease 0s 1 normal;
+    opacity: 0.8;
+}
+@-webkit-keyframes appear {
+    0% { background-color: rgb(289,243,243); opacity:0.8}
+    50% { background-color: rgba(289,243,243,0.6); opacity:0.6;}
+    100%{ background-color: rgba(289,243,243,0); opacity:0.9;}
+    0% { background-color: rgba(0, 0, 0, 0); opacity:0.8}
+    50% { background-color: rgba(0, 0, 0, 0.6); opacity:0.6;}
+    100%{ background-color: rgba(0, 0, 0, 0.8); opacity:0.9;}
+}
+
+#icon1{
+    display: inline-block;
+    float: left;
+    background-image: url("../img/apple.png");
+    height: 100%;
+    width: 100px;
+}
+#icon2{
+    display: inline-block;
+    float: right;
+    background-image: url("../img/avocado.png");
+    height: 100%;
+    width: 100px;
+}
+.logotext{
+    height: 100%;
+    width: 300px;
+    line-height: 65px;
+    font: 70px sans-serif, Arial;
+    font-weight: bold;
+    background: rgba(102, 255, 168, 1.0);
+    background: -webkit-radial-gradient(rgba(102, 255, 168, 1.0), rgba(255, 20, 1, 1.0));
+    background: -moz-radial-gradient(rgba(102, 255, 168, 1.0), rgba(255, 20, 1, 1.0));
+    background: radial-gradient(rgba(102, 255, 168, 1.0), rgba(255, 20, 1, 1.0));
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+.logotext:hover{
+    background: rgba(221,126,101,1);
+    background: linear-gradient(90deg, rgba(221,126,101,1) 14%,
+    rgba(216,221,201,1) 36%, rgba(159,112,155,1) 66%,
+    rgba(163,196,13,0.7) 76%, rgba(0,212,255,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(221,126,101,1) 14%,
+    rgba(216,221,201,1) 36%, rgba(159,112,155,1) 66%,
+    rgba(163,196,13,0.7) 76%, rgba(0,212,255,1) 100%);
+    background: -moz-linear-gradient(90deg, rgba(221,126,101,1) 14%,
+    rgba(216,221,201,1) 36%, rgba(159,112,155,1) 66%,
+    rgba(163,196,13,0.7) 76%, rgba(0,212,255,1) 100%);
+    opacity: 1;
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-animation:anitext 3s ease 0s 1 normal;
+    animation:anitext 3s ease 0s 1 normal;
+}
+@-webkit-keyframes anitext {
+    0% {background: rgba(221,126,101,0);
+        background: linear-gradient(90deg, rgba(221,126,101,0) 14%,
+        rgba(216,221,201,0) 36%, rgba(159,112,155,0) 66%,
+        rgba(163,196,13,0) 76%, rgba(0,212,255,0) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(221,126,101,0) 14%,
+        rgba(216,221,201,0) 36%, rgba(159,112,155,0) 66%,
+        rgba(163,196,13,0) 76%, rgba(0,212,255,0) 100%);
+        background: -moz-linear-gradient(90deg, rgba(221,126,101,0) 14%,
+        rgba(216,221,201,0) 36%, rgba(159,112,155,0) 66%,
+        rgba(163,196,13,0) 76%, rgba(0,212,255,0) 100%);opacity:0}
+    50% {background: rgba(221,126,101,0.5);
+        background: linear-gradient(90deg, rgba(221,126,101,0.5) 14%,
+        rgba(216,221,201,0.5) 36%, rgba(159,112,155,0.5) 66%,
+        rgba(163,196,13,0.5) 76%, rgba(0,212,255,0.5) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(221,126,101,0.5) 14%,
+        rgba(216,221,201,0.5) 36%, rgba(159,112,155,0.5) 66%,
+        rgba(163,196,13,0.5) 76%, rgba(0,212,255,0.5) 100%);
+        background: -moz-linear-gradient(90deg, rgba(221,126,101,0.5) 14%,
+        rgba(216,221,201,0.5) 36%, rgba(159,112,155,0.5) 66%,
+        rgba(163,196,13,0.5) 76%, rgba(0,212,255,0.5) 100%);opacity:0.5}
+    100% {background: rgba(221,126,101,1);
+        background: linear-gradient(90deg, rgba(221,126,101,1) 14%,
+        rgba(216,221,201,1) 36%, rgba(159,112,155,1) 66%,
+        rgba(163,196,13,0.7) 76%, rgba(0,212,255,1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(221,126,101,1) 14%,
+        rgba(216,221,201,1) 36%, rgba(159,112,155,1) 66%,
+        rgba(163,196,13,0.7) 76%, rgba(0,212,255,1) 100%);
+        background: -moz-linear-gradient(90deg, rgba(221,126,101,1) 14%,
+        rgba(216,221,201,1) 36%, rgba(159,112,155,1) 66%,
+        rgba(163,196,13,0.7) 76%, rgba(0,212,255,1) 100%);opacity: 1;}}
+
+#icon1 img{
+    width: 70px;
+    height:70px;
+}
+#icon2 img{
+    width: 70px;
+    height:70px;
+}
+.content{
+    margin: 10% -6px 0 -6px ;
+    width: 100%;
+    display:block;
+    background-color: rgba(289,243,243,0.5);
+    border-left:brown 5px solid ;
+    border-right:darkolivegreen 5px solid;
+}
+.colomn1{
+    text-align: left;
+    display: inline-block;
+    width: 45%;
+    height: 450px;
+    margin: 10px 5px 10px 5px;
+}
+.colomn1:hover{
+    text-align: left;
+    display: inline-block;
+    width: 45%;
+    height: 450px;
+    margin: 10px 5px 10px 5px;
+    box-shadow: rgba(100,100,100,1) 20px 20px 10px 0;
+    -webkit-box-shadow: rgba(100,100,100,1) 20px 20px 10px 0;
+    -moz-box-shadow: rgba(100,100,100,1) 20px 20px 10px 0;
+    -webkit-animation:colomn 3s ease 0s 1 normal;
+    -moz-animation:colomn 3s ease 0s 1 normal;
+    animation:colomn 3s ease 0s 1 normal;
+}
+@-webkit-keyframes colomn{
+    0% {box-shadow: rgba(100,100,100,0) 20px 20px 10px 0;}
+    50%{box-shadow: rgba(100,100,100,0.5) 20px 20px 10px 0;}
+    100%{box-shadow: rgba(100,100,100,1) 20px 20px 10px 0;}
+}
+
+footer {
+    position: fixed;
+    display: block;
+    height: 10%;
+    width: 100%;
+    background-color: #dddddd;
+    opacity: 0.5;
+    float: bottom;
+    margin: 0 -10px 0 -10px;
+    top: 90%;
+}
+footer:hover{
+    -webkit-animation:foot 2s ease 0s 1 normal;
+    animation:foot 2s ease 0s 1 normal;
+    opacity: 1;
+}
+@-webkit-keyframes foot {
+    0% {opacity:0.5}
+    50%{opacity:0.8}
+    100%{opacity:1}
+}
+a{
+    text-decoration: none;
+    color: black;
+
+}
+.prev{
+    display: block;
+    position: absolute;
+    width: 250px;
+    border: rgba(100,100,100,1) 3px solid;
+    font-size: 20px;
+    margin: auto -125px;
+    left: 50%;
+    color: black;
+}
+.prev:hover{
+    border-radius: 50px;
+    font-size: 20px;
+}
