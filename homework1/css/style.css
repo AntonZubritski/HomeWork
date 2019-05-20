@@ -1,0 +1,33 @@
+
+/* Цветовые решения абзацев(Для каждого абзаца свой шрифт, размер, цвет )*/
+#text1\.1{
+    font-family: "Arial Black", sans-serif;
+    color: #F08080;
+    font-size: 16px;}
+#text1\.2{
+    font-family: "Times New Roman", sans-serif;
+    color: #FFB6C1;
+    font-size: 18px;}
+#text1\.3{    font-family: "Arial Narrow", sans-serif;
+    color: #FF7F50;
+    font-style: italic;
+    font-size: 15px;}
+#text2\.1{    font-family: "Droid Serif", serif;
+    color: #F0E68C;
+    font-size: 19px;}
+#text2\.2{    font-family: "Hiragino Kaku Gothic Pro", serif;
+    color: #9400D3;
+    font-size: 14px;}
+#text2\.3{    font-family: "Geeza Pro", sans-serif;
+    color: #D2691E;
+    font-size: 20px;}
+#text3\.1{    font-family: "Charter", sans-serif;
+    color: #2E8B57;
+    font-style: italic;
+    font-size: 19px;}
+#text3\.2{    font-family: "Cochin", sans-serif;
+    color: #808000;
+    font-size: 18px;}
+#text3\.3{    font-family: "American Typewriter", fantasy;
+    color: #48D1CC;
+    font-size: 16px;}
