@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<form name="registration" method="get">
+    <input onkeyup="changeBS()" onchange="changeBS()"
+           name="name" placeholder="Укажите ваше имя!" class="name" type="text"
+           id="name" required >
+    <input onkeyup="changeBS()" onchange="changeBS()"
+           name="email" placeholder="Укажите ваш Email!" class="email" type="email"
+           id="email" required>
+    <input name="submit" class="btn" id="submit" type="submit" value="Отправить">
+</form>
+<script type="text/javascript">
+    let f = document.registration;
+    function changeBS() {
+        if (f.name.value && f.email.value) {
+            f.submit.disabled = false;
+            document.getElementById("submit").className = "btn2";
+        } else {
+            f.submit.disabled = true;
+            document.getElementById("submit").className = "btn";
+        }
+    }
+    changeBS();
+</script>
+</body>
+</html>
