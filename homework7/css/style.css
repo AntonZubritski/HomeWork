@@ -1,0 +1,172 @@
+@charset "UTF-8";
+/*----------------------------Миксины */
+/*-------------------шаблонные селекторы-- */
+.wrapper, .block3 {
+  display: flex;
+  flex-wrap: wrap; }
+
+/*---------------------------------------- */
+body {
+  background: url("../pic/back.jpg") no-repeat;
+  -webkit-background-image: url("../pic/back.jpg");
+  -moz-background-image: url("../pic/back.jpg");
+  background-size: 140%; }
+
+.wrapper {
+  width: 100%;
+  height: 97vh;
+  text-align: center;
+  justify-content: space-between;
+  font-family: "Arial", sans-serif; }
+
+/*--------------------------------------------------Header-- */
+.logo {
+  width: 47%;
+  height: 13%;
+  margin: 0 1% -50px 1%;
+  background: url(../pic/LOGO.png) no-repeat;
+  -webkit-background-image: url(../pic/LOGO.png);
+  background-size: contain;
+  border: none; }
+
+.block {
+  width: 102%;
+  height: 7%;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0 -1% 0 -1%; }
+  .block div {
+    width: 15%;
+    height: 25%;
+    padding: 1% 0;
+    transition: 1s; }
+    .block div:hover {
+      box-shadow: rgba(0, 0, 0, 0.5) 0 -2px 1px -1px;
+      text-shadow: white 0 -13px 2px; }
+
+/*--------------------------------------------------------Nav bar-- */
+.block2 {
+  width: 20%;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center; }
+  .block2 div {
+    width: 100%;
+    height: 10%;
+    flex-direction: column;
+    transition: 1s;
+    border-bottom: none; }
+    .block2 div:hover {
+      box-shadow: rgba(0, 0, 0, 0.5) 0 -2px 1px -1px; }
+
+/*--------------------------------------------------------Picture-- */
+.block3 {
+  width: 80%;
+  height: 70%;
+  justify-content: space-around; }
+  .block3 div {
+    width: 170px;
+    height: 220px;
+    border: black 1px solid;
+    margin: 10px 80px; }
+    .block3 div a {
+      opacity: 0;
+      color: black;
+      height: 100%;
+      width: 100%;
+      display: block;
+      font-size: 20px;
+      transition: 1s linear; }
+      .block3 div a:hover {
+        opacity: 1;
+        background-color: rgba(255, 255, 255, 0.4); }
+
+/*-----------------------------------------------------Image-- */
+.pic1 {
+  background-image: url("../pic/1.jpg");
+  background-size: cover; }
+
+.pic2 {
+  background-image: url("../pic/2.jpg");
+  background-size: cover; }
+
+.pic3 {
+  background-image: url("../pic/3.jpg");
+  background-size: cover; }
+
+.pic4 {
+  background-image: url("../pic/4.jpg");
+  background-size: cover; }
+
+.pic5 {
+  background-image: url("../pic/5.jpg");
+  background-size: cover; }
+
+.pic6 {
+  background-image: url("../pic/6.jpg");
+  background-size: cover; }
+
+/*-----------------------------------------------------Footer-- */
+footer {
+  position: fixed;
+  width: 102%;
+  height: 5%;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0 -1% 0 -1%;
+  top: 95%; }
+
+/*-------------------------------------------------Search-box-- */
+.search {
+  width: 47%;
+  height: 10%;
+  margin: 34px 1% -50px 1%;
+  border: none; }
+  .search form {
+    float: right;
+    width: 35%;
+    position: relative;
+    display: flex;
+    margin: -50px 0 0 300px; }
+    .search form input {
+      border: none; }
+    .search form .input {
+      width: 100%;
+      margin: 40px 1px 36px 40px;
+      padding: 8px 37px 9px 15px;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.2);
+      font: 13px Tahoma, Arial, sans-serif;
+      color: #555;
+      outline: none; }
+      .search form .input:focus {
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), inset 0 1px 2px rgba(0, 0, 0, 0.4);
+        background: rgba(0, 0, 0, 0.3);
+        color: #333; }
+    .search form .submit {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 37px;
+      height: 100%;
+      cursor: pointer;
+      background: url(https://lh4.googleusercontent.com/-b-5aBxcxarY/UAfFW9lVyjI/AAAAAAAABUg/gQtEXuPuIds/s13/go.png) 50% no-repeat;
+      opacity: 0.5; }
+      .search form .submit:hover {
+        opacity: 0.8; }
+
+input[type="search"] {
+  -webkit-appearance: none; }
+
+/*-------------------------------------------------<a>-- */
+a {
+  text-decoration: none;
+  color: black; }
+
+/*-----------------------------ШАБЛОННЫЕ СЕЛЕКТОРЫ--------------------<a>-- */
