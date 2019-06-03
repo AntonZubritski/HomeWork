@@ -7,7 +7,7 @@
     display: grid;
 }
 html {
-    background-color: rgba(16, 180, 170, 0.33);
+    background-color: white;
 }
 /*-------------------Увеличение картинки по процентно-JS--------*/
 img.vincent {
