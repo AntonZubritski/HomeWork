@@ -1,0 +1,37 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header{
+    border: black 1px solid;
+    width: 100%;
+    height: 10%;
+    background-color: darkgrey;
+    font-size: 50px;
+}
+.content{
+    border: black 1px solid;
+    width: 50%;
+    height: 300px;
+    background-color: darkgrey;
+    align-items: center;
+    font-size: 50px;
+    margin: 0 25%;
+}
+footer{
+    width: 100%;
+    height: 10%;
+    border: black 1px solid;
+    background-color: darkgrey;
+    font-size: 30px;
+}
+

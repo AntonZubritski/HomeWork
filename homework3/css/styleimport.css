@@ -1,0 +1,2 @@
+@import "style.css" screen;
+@import "mobile.css" only screen and (max-device-width: 900px);
