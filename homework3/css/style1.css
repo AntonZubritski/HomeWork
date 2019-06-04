@@ -17,18 +17,17 @@
         margin: 0 0;
         order: -2;
     }
-    #SB3 {
+    .wrapper .SB3 {
         width: 100%;
         height: 25%;
-        margin: 5px 0;
         float: left;
         order: -2;
     }
-    #SB2 {
+    .wrapper .SB2 {
         display: none;
     }
 
-    #SB1 {
+    .wrapper .SB1 {
         display: none;
     }
 }
@@ -49,7 +48,7 @@
         height: 55vh;
         margin: 5px 0;
     }
-    #SB1 {
+    .wrapper .SB1 {
         display: none;
     }
     .wrapper .content{
@@ -58,11 +57,11 @@
         float: left;
         margin: 0 0;
     }
-     .wrapper #SB2 {
+    .wrapper .SB2 {
         width: 49.5%;
         height: 20vh;
     }
-    .wrapper #SB3 {
+    .wrapper .SB3 {
         height: 20vh;
         width: 69.5%;
         order: -1;
@@ -92,6 +91,9 @@ body{
 }
 }
 /*--------------------------------------------------Wrapper*/
+body {
+    margin: 0;
+}
 .wrapper{
     display: flex;
     flex-wrap: wrap;
@@ -161,7 +163,6 @@ body{
 }
 /*---------------------------------------------------Side*/
 .side{
-    display: inline-block;
     width: 32.75%;
     height: 20%;
     text-align: center;
@@ -169,8 +170,8 @@ body{
     color: rgba(255,255,255,0.7);
 }
 /*--------------------------------------------------*/
-#SB1{background-color: rgba(199, 199, 165, 0.4);}
-#SB1:hover{
+.SB1{background-color: rgba(199, 199, 165, 0.4);}
+.SB1:hover{
     background-color: rgba(199, 199, 165, 0.8);
     animation: shadow4  1s linear;
     border: rgba(255, 255, 255, 0.5) 1px solid;
@@ -182,8 +183,8 @@ body{
     to{background-color: rgba(199, 199, 165, 0.8)}
 }
 /*--------------------------------------------------*/
-#SB2{background-color: rgba(186, 206, 221, 0.4); }
-#SB2:hover{
+.SB2{background-color: rgba(186, 206, 221, 0.4); }
+.SB2:hover{
     background-color: rgba(186, 206, 221, 0.8);
     animation: shadow5  1s linear;
     border: rgba(255, 255, 255, 0.5) 1px solid;
@@ -195,8 +196,8 @@ body{
     to{background-color: rgba(186, 206, 221, 0.8)}
 }
 /*--------------------------------------------------*/
-#SB3{background-color: rgba(186, 134, 203, 0.4);}
-#SB3:hover{
+.SB3{background-color: rgba(186, 134, 203, 0.4);}
+.SB3:hover{
     background-color: rgba(186, 134, 203, 0.8);
     animation: shadow6  1s linear;
     border: rgba(255, 255, 255, 0.5) 1px solid;
@@ -213,6 +214,5 @@ body{
 }
 .text{
     color: rgba(0, 0, 0, 0.7);
-    line-height: 100px;
     letter-spacing: 10px;
 }

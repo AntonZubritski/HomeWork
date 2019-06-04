@@ -1,41 +1,36 @@
 
+*{
+    padding: 0;
+    margin: 0;
+}
 .wrapper{
     width: 100%;
-    height: 100%;
-    margin: 0 0 0 -10px;
+    height: 100vh;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 header{
-    position: fixed;
     border: black 1px solid;
     width: 100%;
     height: 10%;
-    bottom: 90%;
-    padding: 35px 0 0 0;
     background-color: darkgrey;
     font-size: 50px;
 }
 .content{
-    display: flex;
-    position: fixed;
-    justify-content: center;
     border: black 1px solid;
-    width: 1080px;
+    width: 50%;
     height: 300px;
-    left: 50%;
-    margin: 0 0 0 -540px;
-    top: 30%;
     background-color: darkgrey;
     align-items: center;
     font-size: 50px;
+    margin: 0 25%;
 }
 footer{
-    display: block;
-    position: fixed;
     width: 100%;
     height: 10%;
     border: black 1px solid;
-    top:90% ;
     background-color: darkgrey;
     font-size: 30px;
 }
