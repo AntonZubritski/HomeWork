@@ -1,0 +1,83 @@
+html, body, .view{
+    height: 100%;
+}
+
+.nav-goods, .page-footer{
+    background: rgb(13, 87, 29);
+    background: linear-gradient(90deg,
+    rgb(23, 131, 99) 0%,
+    rgba(0, 0, 0, 0.91) 50%,
+    rgb(23, 131, 99) 100%);
+}
+
+.img-size{
+    max-width: 5vw;
+}
+.modal-dialog.modal-notify.modal-primary .badge,
+.modal-dialog.modal-notify.modal-primary .modal-header,
+.pagination.pg-blue .page-item.active .page-link,
+.pagination.pg-blue .page-item.active .page-link:hover {
+    background-color: #58b242;
+}
+.footer_head {
+    display: block;
+}
+/*--------------------------------------------------------*/
+.m-6 {
+    margin: 4.5rem !important;
+}
+
+.mt-6,
+.my-6 {
+    margin-top: 4.5rem !important;
+}
+
+.mr-6,
+.mx-6 {
+    margin-right: 4.5rem !important;
+}
+
+.mb-6,
+.my-6 {
+    margin-bottom: 4.5rem !important;
+}
+
+.ml-6,
+.mx-6 {
+    margin-left: 4.5rem !important;
+}
+
+.m-7 {
+    margin: 6rem !important;
+}
+
+.mt-7,
+.my-7 {
+    margin-top: 6rem !important;
+}
+
+.mr-7,
+.mx-7 {
+    margin-right: 6rem !important;
+}
+
+.mb-7,
+.my-7 {
+    margin-bottom: 6rem !important;
+}
+
+.ml-7,
+.mx-7 {
+    margin-left: 6rem !important;
+}
+.pt-7,
+.py-7 {
+    padding-top: 6rem !important;
+}
+/*--------------------------------------------------------*/
+
+@media screen and (max-width: 620px) {
+    .footer_head {
+        display: none;
+    }
+}
