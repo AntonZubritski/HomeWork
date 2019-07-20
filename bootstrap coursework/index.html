@@ -14,8 +14,8 @@
   <link href="css/mdb.min.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <link href="css/style.css" rel="stylesheet">
-    <!-- Slider -->
-    <link href="css/slider.css" rel="stylesheet">
+  <!-- Slider -->
+  <link href="css/slider.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
@@ -46,8 +46,8 @@
                 </ul>
                 <ul class="navbar-nav nav-flex-icons">
                     <li class="nav-item">
-                        <a href="#" class="nav-link waves-effect">
-                            <span class="badge green z-depth-1 mr-1">13</span>
+                        <a href="cart.html" class="nav-link waves-effect">
+                            <span class="badge green z-depth-1 mr-1" id="counter"></span>
                             <i class="fa fa-shopping-cart"></i>
                             <span class="clearfix d-none d-sm-inline-block">Корзина</span>
                         </a>
@@ -166,7 +166,11 @@
         </div>
 
     <main>
-        <div class="container">
+
+        <!--Cart.HTML Import-->
+        <!--<link id="import" rel="import" href="cart.html">-->
+
+        <div class="container" id="container">
 
              <nav class="nav-goods navbar navbar-expand-lg navbar-dark ndb-color lighten-3 mb-5">
                  <span class="navbar-brand"> Категории:</span>
@@ -268,10 +272,12 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
-    <!-- Slider core JavaScript -->
+  <!-- Slider core JavaScript -->
   <script src="js/slide.js"></script>
   <!-- Goods core JavaScript DataBase -->
   <script type="text/javascript" src="js/goods.js"></script>
+    <!-- Cart core JavaScript -->
+    <script type="text/javascript" src="js/cart.js"></script>
   <!-- Cart core JavaScript -->
   <script type="text/javascript" src="js/script.js"></script>
 
