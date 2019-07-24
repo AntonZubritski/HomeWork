@@ -1,58 +1,50 @@
 "use strict";
 
-/*---------------------Win.ONLOAD-----------------------*/
+
 
 /*---------------------Pagination-----------------------*/
-let notesOnPage = 8; /*Колличество элементов на странице*/
+let notesOnPage = 4; /*Колличество элементов на странице*/
 let paginationAmount = Math.ceil(goods.length / notesOnPage);
 
+let pagination = document.getElementById('pagination');
+
+const paginationActiveAmount = () => {
+    for (let i = 0; i < paginationAmount; i++) {
+
+        let li = document.createElement('li');
+        pagination.appendChild(li);
+
+        let findLi = document.querySelectorAll('#pagination li')[i];
+        findLi.classList.add('page-item');
+
+        let a = document.createElement('a');
+        findLi.appendChild(a);
+        let findA = document.querySelectorAll('#pagination li a')[i];
+        findA.classList.add('page-link');
+        a.innerHTML = i + 1;
+
+        let items = document.querySelectorAll('#pagination li a');
+        for (let item of items) {
+            item.addEventListener("click", function () {
+                let li = document.querySelector(".page-item.active");
+                li.classList.remove("active");
+                this.parentNode.classList.add("active");
 
 
-for (let i = 0; i < paginationAmount; i++) {
-    let pagination = document.getElementById('pagination');
-    let li = document.createElement('li');
-    pagination.appendChild(li);
+                let pageNum = +this.innerHTML;
+                let start = (pageNum - 1) * notesOnPage ;
+                let end = start + notesOnPage;
+                let notes = goods.slice(start, end);
+                renderCards(notes);
+                btnActiveGood();
 
-    let findLi = document.querySelectorAll('#pagination li')[i];
-    findLi.classList.add('page-item');
+            }  )}
 
-    let a = document.createElement('a');
-    findLi.appendChild(a);
-    let findA = document.querySelectorAll('#pagination li a')[i];
-    findA.classList.add('page-link');
-
-    let b = i + 1;
-    a.innerHTML = b;
-}
-
-
-let items = document.querySelectorAll('#pagination li a');
-
-for (let item of items) {
-    item.addEventListener("click", function () {
-        let li = document.querySelector(".page-item.active");
-        li.classList.remove("active");
-        this.parentNode.classList.add("active");
-
-
-
-        let pageNum = +this.innerHTML;
-        let start = (pageNum - 1) * notesOnPage ;
-        let end = start + notesOnPage;
-        let notes = goods.slice(start, end);
-        renderCards(notes);
-
-    }  )}
-
-
-/*---------------------Add Class Button + LocalStorage-----------------------*/
-
-
-
+    }
+};
 
 let btnClick = e => {
     let id = e.getAttribute('data-id');
-    console.log("id", id);
 
     if (e.classList.contains('active')) {
 
@@ -74,40 +66,11 @@ let btnClick = e => {
 };
 
 
-
-
-/*---------------------Cart Counter-----------------------*/
-
-
-
-
-/*---------------------Cart.HTML Import-----------------------*/
-
-// let cartTransition = () => {
-//     let tagImport = document.getElementById('import');
-//     tagImport.setAttribute('href', 'cart.html');
-//
-//     document.getElementById('container').style.display = 'none';
-//
-//     let cart = document.querySelector('link[rel="import"]').import;
-//     let text = cart.getElementsByTagName('table');
-//
-//     document.write.appendChild(text.cloneNode(true));
-//
-// };
-
-
-
-
-// click => conteiner disply none => добавть <link rel="import" href="cart.html">
-
-
-
 /*---------------------Goods Render-----------------------*/
 const renderCards = notes => {
     return document.querySelector('#goodsItem').innerHTML = notes.map(note => {
         return (
-                `<div class="col-lg-3 col-md-6 mb-4" >
+            `<div class="col-lg-3 col-md-6 mb-4" >
                      <div class="card">
                          <div class="view overlay">
                              <img class="card-img-top" src="${note.img}" alt="">
@@ -129,7 +92,7 @@ const renderCards = notes => {
                                  <strong>${note.cost}$</strong>
                              </h4>
                              
-                             <button type="submit" data-id = ${note.id} class="btn btn-md my-0" onclick="btnClick(this)">
+                             <button type="submit" data-id = ${note.id} data-toggle="modal" data-target="#myModal" class="btn btn-md my-0 btnGoods" onclick="btnClick(this); renderModal(this)">
                                  Добавить в корзину <i class="fa fa-shopping-cart ml-1"></i>
                              </button>
                              
@@ -143,18 +106,123 @@ const renderCards = notes => {
 
 
 
-
-
-window.onload = function(){
-    let pageNum = 1;
-    let start = (pageNum - 1) * notesOnPage;
-    let end = start + notesOnPage;
-    let notes = goods.slice(start, end);
-    renderCards(notes);
-    counter();
-    document.querySelector(".page-item").classList.add("active");
-
+const btnActiveGood = () => {
+    let btnGoods = document.querySelectorAll('.btnGoods');
+    for (let btnGood of btnGoods) {
+        for (let cartCountStore of cartCountStorSplit)
+            if (cartCountStore == btnGood.dataset.id) {
+                btnGood.classList.add("active");
+                btnGood.innerHTML = "Удалить из корзины";
+            }
+    }
 };
+
+
+
+/*---------------------Win.ONLOAD-----------------------*/
+// pagination.addEventListener('click', btnActiveGood());
+
+
+
+if (window.location.pathname == '/Desktop/Home/bootstrap%20coursework/catalog.html' || '/Desktop/Home/bootstrap%20coursework/cart.html') {
+    window.onload = function(){
+        let pageNum = 1;
+        let start = (pageNum - 1) * notesOnPage;
+        let end = start + notesOnPage;
+        let notes = goods.slice(start, end);
+        paginationActiveAmount();
+        renderCards(notes);
+        counter();
+        btnActiveGood();
+        document.querySelector(".page-item").classList.add("active");
+
+    }}
+
+
+
+// let items = document.querySelectorAll('#pagination li a');
+// for (let item of items) {
+//     item.addEventListener("click", function () {
+//         let li = document.querySelector(".page-item.active");
+//         li.classList.remove("active");
+//         this.parentNode.classList.add("active");
+//
+//
+//         let pageNum = +this.innerHTML;
+//         let start = (pageNum - 1) * notesOnPage ;
+//         let end = start + notesOnPage;
+//         let notes = goods.slice(start, end);
+//         renderCards(notes);
+//
+//     }  )}
+
+
+/*---------------------Add Class Button + LocalStorage-----------------------*/
+// let btnGoods = document.querySelectorAll('.btnGoods');
+// for (let btnGood of btnGoods) {
+//     btnGoods.addEventListener('click', function () {
+//         let id = this.getAttribute('data-id');
+//         console.log("id", id);
+//         if (this.classList.contains('active')) {
+//
+//             this.classList.remove('active');
+//             this.innerHTML = 'Добавить в корзину';
+//             cartCount.pop(id);
+//             localStorage.setItem('Key', JSON.stringify(cartCount));
+//             counter();
+//
+//         } else {
+//
+//             this.classList.add('active');
+//             this.innerHTML = 'Удалить из корзины';
+//             cartCount.push(id);
+//             localStorage.setItem('Key', JSON.stringify(cartCount));
+//             counter();
+//     }
+// })}
+
+
+
+
+
+
+
+/*---------------------Active menu -----------------------*/
+
+
+
+
+// let navActiveAll = document.querySelectorAll('#navbarContent li.nav-item');
+//
+// for (let navActive of navActiveAll) {
+//     navActive.addEventListener("click", function (e) {
+//
+//             e.classList.add("active");
+//
+//
+//     })
+// }
+
+/*---------------------Cart.HTML Import-----------------------*/
+
+// let cartTransition = () => {
+//     let tagImport = document.getElementById('import');
+//     tagImport.setAttribute('href', 'cart.html');
+//
+//     document.getElementById('container').style.display = 'none';
+//
+//     let cart = document.querySelector('link[rel="import"]').import;
+//     let text = cart.getElementsByTagName('table');
+//
+//     document.write.appendChild(text.cloneNode(true));
+//
+// };
+
+
+
+
+// click => conteiner disply none => добавть <link rel="import" href="cart.html">
+
 
 
 

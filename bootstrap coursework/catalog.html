@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Material Design Bootstrap</title>
+  <title>Catalog ADp</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
   <!-- Bootstrap core CSS -->
@@ -31,17 +31,17 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a href="workshop.html" class="nav-link waves-effect">Мастерская</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="home.html" class="nav-link waves-effect">О нас</a>
+                    </li>
                     <li class="nav-item active">
-                        <a href="#" class="nav-link waves-effect">Мастерская</a>
+                        <a href="catalog.html" class="nav-link waves-effect">Каталог</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link waves-effect">О нас</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link waves-effect">Каталог</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link waves-effect">Контакты</a>
+                        <a href="contact.html" class="nav-link waves-effect">Контакты</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav nav-flex-icons">
@@ -54,24 +54,30 @@
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link waves-effect">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link waves-effect">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link waves-effect">
                             <i class="fa fa-instagram"></i>
                         </a>
                     </li>
                 </ul>
+                <div class="dropdown">
+                    <a href="registration.html" class="dark-grey-text" data-toggle="dropdown">SIGN IN
+                    </a>
+                    <form class="dropdown-menu p-4 mr-2 drop-left">
+                        <div class="form-group">
+                            <label for="exampleDropdownFormEmail2">Email address</label>
+                            <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleDropdownFormPassword2">Password</label>
+                            <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+                        </div>
+                        <a href="registration.html">Регистрация</a>
+                        <button type="submit" class="btn green">Войти</button>
+                    </form>
+                </div>
             </div>
         </div>
     </nav>
-        <div class="slider mt-7 pointer-event col-lg-12 col-md-12">
+        <div class="slider mt-5 pointer-event col-lg-12 col-md-12">
             <ul class="slider-list">
                 <li class="slider-list__item">
                     <span class="back__element">
@@ -168,7 +174,7 @@
     <main>
 
         <!--Cart.HTML Import-->
-        <!--<link id="import" rel="import" href="cart.html">-->
+
 
         <div class="container" id="container">
 
@@ -206,6 +212,57 @@
              </nav>
 
             <section class="text-center mb-4">
+
+                <!--Modal window-->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-body modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+
+                    <div class="container dark-grey-text">
+                        <div class="row wow fadeInn">
+                            <div class="col-md-4 mb-4">
+                                <img id="imgModal" src="img/goods/1.jpg" alt="fenyaPic" class="img-fluid img-thumbnail">
+                            </div>
+                            <div class="col-md-8 mb-4">
+                                <div class="p-4">
+                                    <div class="mb-3">
+                                        <a href="">
+                                            <span class="badge purple mr-1">Категория 2</span>
+                                        </a>
+                                        <a href="">
+                                            <span class="badge blue mr-1">NEW</span>
+                                        </a>
+                                        <a href="">
+                                            <span class="badge red mr-1">Топчик!</span>
+                                        </a>
+                                    </div>
+                                    <p class="lead">
+                                        <span class="mr-1">
+                                            <del id="oldCostModal">200$</del>
+                                        </span>
+                                        <span class="mr-1" id="costModal">Cost</span>
+                                    </p>
+                                    <p class="lead font-weight-bold" id="nameModal">Name</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Assumenda at deleniti dicta dolor ex harum illo in modi
+                                        molestias nulla numquam perferendis porro quae quasi quod
+                                        rem veniam, voluptas voluptatum.
+                                    </p>
+                                    <form class="d-flex justify-content-left">
+                                        <input type="number" value="1" aria-label="search"
+                                               style="width: 50px;" class="form-control">
+                                        <button type="submit" class="btn green btn-md my-0 p">
+                                            Добавить в корзину <i class="fa fa-shopping-cart ml-1"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                </div>
+
                 <div class="row wow fadeIn" id="goodsItem">
 
                     <!--Goods inner-->
@@ -280,6 +337,8 @@
     <script type="text/javascript" src="js/cart.js"></script>
   <!-- Cart core JavaScript -->
   <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
+
 
 </body>
 

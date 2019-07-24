@@ -102,110 +102,181 @@ html, body, .view{
 
 
 /*-----------------------Registration--------------------*/
-.reg{
-    width: 100%;
-    height: 82vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("../img/mountainpng-1.png");
-}
-
-.form{
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 10px;
-    width: 330px;
-    border: 1px solid rgb(13, 87, 29) ;
-}
-.form a{
+a:hover,a:focus{
+    outline: none;
     text-decoration: none;
-    transition: .2s;
-    color: #177476;
 }
-.form a:hover{
-    color: black;
+.tab{
+    background: rgb(13, 87, 29);
+    background: linear-gradient(70deg,
+    rgb(23, 131, 99) 0%,
+    rgba(0, 0, 0, 0.91) 70%,
+    rgb(23, 131, 99) 100%);
+    padding: 40px 50px;
+    position: relative;
 }
-.form ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.form li{
-    width: 24%;
-    display: inline-block;
-    text-align: center;
-}
-.form input{
-    display: block;
+.tab:before{
+    content: "";
     width: 100%;
-    margin: 10px 0;
-}
-
-label.tab{
-    display: inline-block;
-    width: 143px;
-    font-weight: 600;
-    padding: 10px;
-    color: #177476;
-    border-radius: 3px 3px 0 0 ;
-    margin-bottom: -1px;
-    cursor: pointer;
-}
-label.tab.active{
-    background-color: #fff;
-    color: #989759;
-}
-
-.tab-form{
-    background-color: #fff;
-    display: none;
-    padding: 30px 20px 20px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-.tab-form.active{
-    background-color: #fff;
+    height: 100%;
     display: block;
-    padding: 20px 10px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(13, 87, 29);
+    background: linear-gradient(30deg,
+    rgb(23, 131, 99) 0%,
+    rgba(0, 0, 0, 0.91) 20%,
+    rgb(23, 131, 99) 100%);
+    opacity: 0.85;
 }
-a.button {
-    background: #177476;
-    color: #ffffff;
+.tab .nav-tabs{
+    border-bottom: none;
+    padding: 0 20px;
+    position: relative;
+}
+.tab .nav-tabs li{ margin: 0 30px 0 0; }
+.tab .nav-tabs li a{
     font-size: 18px;
+    color: #fff;
+    border-radius: 0;
     text-transform: uppercase;
-    display: block;
-    text-align: center;
-    line-height: 46px;
-    margin-top: 30px;
+    background: transparent;
+    padding: 0;
+    margin-right: 0;
+    border: none;
+    border-bottom: 2px solid transparent;
+    opacity: 0.5;
+    position: relative;
+    transition: all 0.5s ease 0s;
+}
+.tab .nav-tabs li a:hover {
+    background: transparent;
+}
+.tab .nav-tabs li.active a,
+.tab .nav-tabs li.active a:focus,
+.tab .nav-tabs li.active a:hover{
+    border: none;
+    background: transparent;
+    opacity: 1;
+    border-bottom: 2px solid #07380e;
+    color: #fff;
+}
+.tab .tab-content{
+    padding: 20px 0 0 0;
+    margin-top: 40px;
+    background: transparent;
+    z-index: 1;
+    position: relative;
+}
+.form-bg{ background: #ddd; }
+.form-horizontal .form-group{
+    margin: 0 0 15px 0;
+    position: relative;
+}
+.form-horizontal .form-control{
+    height: 40px;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    border-radius: 20px;
+    box-shadow: none;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+}
+.form-horizontal .form-control:focus{
+    box-shadow: none;
+    outline: 0 none;
+}
+.form-horizontal .form-group label{
+    padding: 0 20px;
+    color: #b3bed3;
+    text-transform: capitalize;
     margin-bottom: 10px;
 }
-.social {
-    display: flex;
-    justify-content: space-between;
-    font-size: 24px;
+.form-horizontal .main-checkbox{
+    width: 20px;
+    height: 20px;
+    background: white;
+    float: left;
+    margin: 5px 0 0 20px;
+    border: 1px solid #07380e;
+    position: relative;
 }
-.social a {
-    width: 40px;
-    height: 40px;
-    display: block;
-    line-height: 40px;
-    text-align: center;
+.form-horizontal .main-checkbox label{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
 }
-.social + a {
-    margin-top: 10px;
-    display: block;
-    font-size: 12px;
-    text-align: center;
+.form-horizontal .main-checkbox label:after{
+    content: "";
+    width: 10px;
+    height: 5px;
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    border: 3px solid #fff;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+    opacity: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
-.checkreg{
-    margin-top: 10px;
-    font-size: 12px;
+.form-horizontal .main-checkbox input[type=checkbox]{ visibility: hidden; }
+.form-horizontal .main-checkbox input[type=checkbox]:checked + label:after{ opacity: 1; }
+.form-horizontal .text{
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 7px;
+    line-height: 20px;
+    padding-top: 5px;
+    text-transform: capitalize;
 }
-form input.checkbox{
-    width: 25px;
-    display: inline-block;
+.form-horizontal .btn{
+    width: 100%;
+    background: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin: 20px 0 30px 0;
+}
+.form-horizontal .btn:focus{
+    background: white;
+    color: white;
+    outline: none;
+    box-shadow: none;
+}
+.form-horizontal .forgot-pass{
+    border-top: 1px solid white;
     margin: 0;
+    text-align: center;
 }
-main .container {
+.form-horizontal .forgot-pass .btn{
+    width: auto;
+    background: transparent;
+    margin: 30px 0 0 0;
+    color: white;
+    text-transform: capitalize;
+    transition: all 0.3s ease 0s;
+}
+.form-horizontal .forgot-pass .btn:hover{ color: #58b242; }
+@media only screen and (max-width: 479px){
+    .tab{ padding: 40px 20px; }
+}
+
+.dropdown:hover > .dropdown-menu {
     display: block;
+    transition: 5s; /* не работает*/
 }

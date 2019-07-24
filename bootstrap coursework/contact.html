@@ -14,13 +14,14 @@
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
-</head>
 
+</head>
 <body>
 <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
     <div class="container">
-        <a href="#" class="navbar-brand waves-effect">
-            <strong class="black-text">adParacord</strong>
+        <a href="#" class="navbar-brand">
+            <img class="img-size" src="img/IMG_8326.png" onclick="this.setAttribute('src','img/IMG_8326green.png')"
+                 alt="LOGO" >
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
                 aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,23 +30,23 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item ">
+                <li class="nav-item">
                     <a href="workshop.html" class="nav-link waves-effect">Мастерская</a>
                 </li>
-                <li class="nav-item ">
+                <li class="nav-item">
                     <a href="home.html" class="nav-link waves-effect">О нас</a>
                 </li>
                 <li class="nav-item">
                     <a href="catalog.html" class="nav-link waves-effect">Каталог</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a href="contact.html" class="nav-link waves-effect">Контакты</a>
                 </li>
             </ul>
             <ul class="navbar-nav nav-flex-icons">
                 <li class="nav-item">
-                    <a href="#" class="nav-link waves-effect">
-                        <span class="badge green z-depth-1 mr-1">13</span>
+                    <a href="cart.html" class="nav-link waves-effect">
+                        <span class="badge green z-depth-1 mr-1" data-qantity="0">0</span>
                         <i class="fa fa-shopping-cart"></i>
                         <span class="clearfix d-none d-sm-inline-block">Корзина</span>
                     </a>
@@ -55,76 +56,42 @@
                         <i class="fa fa-instagram"></i>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link waves-effect">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link waves-effect">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link waves-effect">
-                        <i class="fa fa-instagram"></i>
-                    </a>
-                </li>
             </ul>
+
+            <div class="dropdown">
+                <a href="#" class="dark-grey-text" data-toggle="dropdown">SIGN IN
+                </a>
+                <form class="dropdown-menu p-4 mr-2 drop-left">
+                    <div class="form-group">
+                        <label for="exampleDropdownFormEmail2">Email address</label>
+                        <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleDropdownFormPassword2">Password</label>
+                        <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+                    </div>
+                    <a href="registration.html">Регистрация</a>
+                    <button type="submit" class="btn green">Войти</button>
+                </form>
+            </div>
         </div>
     </div>
 </nav>
 
-<main class="pt-7">
-    <div class="container dark-grey-text">
-        <div class="row wow fadeInn">
-            <div class="col-md-6 mb-4">
-                <img src="img/goods/1.jpg" alt="fenya1" class="img-fluid img-thumbnail">
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="p-4">
-                    <div class="mb-3">
-                        <a href="">
-                            <span class="badge purple mr-1">Категория 2</span>
-                        </a>
-                        <a href="">
-                            <span class="badge blue mr-1">NEW</span>
-                        </a>
-                        <a href="">
-                            <span class="badge red mr-1">Топчик!</span>
-                        </a>
-                    </div>
-                    <p class="lead">
-                        <span class="mr-1">
-                            <del>200$</del>
-                        </span>
-                        <span class="mr-1 ">
-                            100$
-                        </span>
-                    </p>
-                    <p class="lead font-weight-bold">Discription</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Assumenda at deleniti dicta dolor ex harum illo in modi
-                        molestias nulla numquam perferendis porro quae quasi quod
-                        rem veniam, voluptas voluptatum.
-                    </p>
-                    <form class="d-flex justify-content-left">
-                        <input type="number" value="1" aria-label="search"
-                               style="width: 100px;" class="form-control">
-                        <button type="submit" class="btn green btn-md my-0 p">
-                            Добавить в корзину <i class="fa fa-shopping-cart ml-1"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+
+
+
+
+
+<main class="container">
 </main>
 
-
-
-<footer class="mt-3 sticky-footer page-footer text-center font-small wow fadeIn">
-    <div class="p-1">
+<footer class="fixed-bottom page-footer text-center font-small mt-4 fadeIn">
+    <div class="pt-4 footer_head">
+        FOLLOW AD PARACORD
+    </div>
+    <hr class="mt-1">
+    <div class="pb-4">
         <a href="#">
             <i class="fa fa-vk mr-3"></i>
         </a>
@@ -140,14 +107,14 @@
         <a href="#">
             <i class="fa fa-telegram mr-3"></i>
         </a>
-        <a href="https://www.instagram.com/a.zubritski/">
+        <a href="#">
             <i class="fa fa-instagram mr-3"></i>
         </a>
-        <a href="https://github.com/">
+        <a href="#">
             <i class="fa fa-github mr-3"></i>
         </a>
     </div>
-    <div class="footer-copyright py-1">
+    <div class="footer-copyright py-3">
         CREATED BY: <a href="https://www.instagram.com/a.zubritski/">@a.zubritski</a>
     </div>
 </footer>
@@ -164,12 +131,14 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="js/mdb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
 
 <script type="text/javascript" src="js/goods.js"></script>
 <!-- Cart core JavaScript -->
 <script type="text/javascript" src="js/cart.js"></script>
 <!-- Cart core JavaScript -->
 <script type="text/javascript" src="js/script.js"></script>
+
 </body>
 
 </html>

@@ -32,17 +32,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a href="#" class="nav-link waves-effect">Мастерская</a>
+                <li class="nav-item ">
+                    <a href="workshop.html" class="nav-link waves-effect">Мастерская</a>
+                </li>
+                <li class="nav-item ">
+                    <a href="home.html" class="nav-link waves-effect">О нас</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link waves-effect">О нас</a>
+                    <a href="catalog.html" class="nav-link waves-effect">Каталог</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link waves-effect">Каталог</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link waves-effect">Контакты</a>
+                    <a href="contact.html" class="nav-link waves-effect">Контакты</a>
                 </li>
             </ul>
             <ul class="navbar-nav nav-flex-icons">
@@ -51,6 +51,11 @@
                         <span class="badge green z-depth-1 mr-1" data-qantity="0">0</span>
                         <i class="fa fa-shopping-cart"></i>
                         <span class="clearfix d-none d-sm-inline-block">Корзина</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link waves-effect">
+                        <i class="fa fa-instagram"></i>
                     </a>
                 </li>
             </ul>
@@ -74,38 +79,69 @@
         </div>
     </div>
 </nav>
-<div class="reg pt-8">
-    <div class="form">
-        <label title="Вкладка 1" class="tab active">Авторизация</label>
-        <label title="Вкладка 2" class="tab ">Регистрация</label>
 
-        <form class="tab-form active">
-            <input class="form-control" type="email" placeholder="Введите ваш E-mail">
-            <input class="form-control" type="password" placeholder="Введите пароль">
-            <a href="#" class="button">Войти</a>
-
-            <ul class="social">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-telegram"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-            </ul>
-            <a href="#">Забыли E-mail или пароль?</a>
-
-        </form>
-        <form class="tab-form">
-            <input class="form-control" type="email" placeholder="Введите ваш E-mail">
-            <input class="form-control" type="text" placeholder="Введите ваше Имя">
-            <input class="form-control" type="password" placeholder="Введите пароль">
-            <a href="#" class="button">Регистрация</a>
-
-            <label class="checkbox">
-                <input type="checkbox" class="checkbox">
-            </label>
-            <span class="checkreg">Ознакомлен(-а) и принимаю
-                <a href="#">условия регистрации</a>
-            </span>
-        </form>
+<div class="container mt-7">
+    <div class="row justify-content-center">
+        <div class="col-md-offset-3 col-md-6">
+            <div class="tab" role="tabpanel">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">sign in</a></li>
+                    <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">sign up</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content tabs">
+                    <div role="tabpanel" class="tab-pane fade in active show" id="Section1">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">username</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="form-group">
+                                <div class="main-checkbox">
+                                    <input value="None" id="checkbox1" name="check" type="checkbox">
+                                    <label for="checkbox1"></label>
+                                </div>
+                                <span class="text">Keep me Signed in</span>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-default">Sign in</button>
+                            </div>
+                            <div class="form-group forgot-pass">
+                                <button type="submit" class="btn btn-default">forgot password</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="Section2">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">First Name</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Last Name</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-default">Sign up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <footer class="page-footer text-center font-small fadeIn">
@@ -149,6 +185,12 @@
 <script type="text/javascript" src="js/mdb.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="js/registration.js"></script>
+
+<script type="text/javascript" src="js/goods.js"></script>
+<!-- Cart core JavaScript -->
+<script type="text/javascript" src="js/cart.js"></script>
+<!-- Cart core JavaScript -->
+<script type="text/javascript" src="js/script.js"></script>
 
 </body>
 </html>
