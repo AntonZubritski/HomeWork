@@ -1,12 +1,20 @@
-// $(document).ready(function () {
-//
-//     <!-- Табы на JS -->
-//     $(".form").on("click", ".tab", function () {
-//         // Удаляем классы active
-//         $(".form").find(".active").removeClass("active");
-//
-//         // Добавляем класс active
-//         $(this).addClass("active");
-//         $(".tab-form").eq($(this).index()).addClass("active");
-//     });
-// });
+
+//CATALOG
+
+let btnRegClick = document.getElementById('btnClickReg');
+
+const adminPanelInn = function () {
+    let email = document.getElementById('exampleDropdownFormEmail2');
+    let password = document.getElementById('exampleDropdownFormPassword2');
+
+    event.preventDefault();
+
+    if (email.value == 'admin@admin.by' && password.value == 'admin') {
+
+        console.log('validate');
+
+    } else {
+        return false;
+    }
+
+};

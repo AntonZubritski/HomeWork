@@ -6,16 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
+    <title>AdminAD</title>
 
-
-    <title>Admin</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
-    <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+
     <link href="css/mdb.min.css" rel="stylesheet">
-    <!-- Your custom styles (optional) -->
+
     <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -39,7 +37,7 @@
                     <a href="home.html" class="nav-link waves-effect">О нас</a>
                 </li>
                 <li class="nav-item">
-                    <a href="index.html" class="nav-link waves-effect">Каталог</a>
+                    <a href="catalog.html" class="nav-link waves-effect">Каталог</a>
                 </li>
                 <li class="nav-item">
                     <a href="contact.html" class="nav-link waves-effect">Контакты</a>
@@ -64,59 +62,108 @@
     </div>
 </nav>
 
+<!------------CRUD--------------->
+
 <div class="container mt-7">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Товары</h5>
+            <form id="frmPerson" class="form-horizontal row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="name" class="control-label">Наименование товара</label>
+                        <div class="col-sm-6">
+                            <input type="text" id="name" class="form-control" placeholder="Пример: Fenya#5">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cost" class="control-label">Цена</label>
+                        <div class="col-sm-6">
+                            <input type="text" id="cost" class="form-control" placeholder="100 $">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="oldCost" class="control-label">Старая цена</label>
+                        <div class="col-sm-6">
+                            <input type="text" id="oldCost" class="form-control" placeholder="200 $">
+                        </div>
+                    </div>
+                </div>
 
-    <div class="row">
-        <form name="myEditForm">
-            <input type="hidden" name="__innerID" id="__innerID" value="-1">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="img" class="control-label">Картинка</label>
+                        <div class="col-10">
+                            <input type="file" id="img" class="form-control" placeholder="Путь к картинке">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="stat" class="control-label">Статус</label>
+                        <div class="col-10">
+                            <input type="text" id="stat" class="form-control" placeholder="Пример: NEW или ничего">
+                        </div>
+                    </div>
+                    <td>
+                        <select id="cat">
 
-            <div class="form-group">
-                <label for="name">Наименование</label>
-                <input name="name" id="name" class="form-control"  placeholder="Введите имя товара">
-            </div>
-
-            <div class="form-group">
-                <label for="cost">Цена</label>
-                <input name="cost" id="cost"  class="form-control" placeholder="Введите цену товара">
-            </div>
-
-            <div class="form-group">
-                <label for="img">Картинка</label>
-                <input name="img" id="img" type="text" class="form-control" placeholder="Путь к картинке">
-            </div>
-
-            <div class="form-group">
-                <label for="stat">Статус</label>
-                <input name="stat" id="stat" type="text" class="form-control" placeholder="Если новый: NEW">
-            </div>
-
-
-            <button type="button" class="btn btn-primary">Записать</button>
-        </form>
+                        </select>
+                    </td>
+                    <div class="form-group mt-2">
+                        <div class="col-lg-offset-2 col-sm-4">
+                            <input type="submit" value="Записать" id="btnSave" class="btn white-text btn-gr" onclick=""/>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
+    <!------------Category Inn--------------->
+    <div class="card mt-2 mb-2">
+        <div class="card-body">
+            <form action="">
+                <h5 class="card-title">Категории</h5>
+                <div class="row">
+                    <div class="col-6">
+
+                        <div class="col-12 mt-2 row" >
+                            <label for="category" class="control-label"></label>
+                            <div class="col-sm-8">
+                                <label for="category">Ввод категорий</label>
+                                <input type="text" name="category" id="category" class="form-control" placeholder="Категория">
+                            </div>
+                            <div class="col-2 mt-4">
+                                <i class="fa fa-plus mr-3 color-icon" id="btnSaveCategory" title='Edit${i}'></i>
+                                <i class="fa fa-times-circle mr-3 color-icon" id="btnDeleteCategory" title='Delete${i}'></i>
+                            </div>
+                        </div>
+                        <span id="warningText" class="warning-color"></span>
 
 
-    <div class="row" style="margin-top: 50px;">
+                    </div>
+                    <div class="col-6">
+                        <!------------Category List Inn--------------->
 
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Наименование</th>
-                <th scope="col">Цена</th>
-                <th scope="col">Картинка</th>
-                <th scope="col">Статус</th>
-            </tr>
-            </thead>
-            <tbody id="ourDataView">
+                        <div class="form-group">
+                            <label for="categorysList">Категории</label>
+                            <select name="categorysList" multiple class="form-control" id="categorysList" onchange="category.value=value">
 
-            </tbody>
-        </table>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
     </div>
-
 </div>
 
-<footer class="page-footer text-center font-small wow fadeIn">
+
+<!------------Tbl Inn--------------->
+<div class="container">
+    <table id="tblList" class="table table-bordered"></table>
+</div>
+
+<footer class="footer page-footer text-center font-small  ">
     <hr class="my-4">
     <div class="pb-4">
         <a href="#">
@@ -132,7 +179,7 @@
             <i class="fa fa-youtube mr-3"></i>
         </a>
         <a href="#">
-            <i class="fa fa-telegram mr-3"></i>
+            <i class="fa fa-telegram mr-3" ></i>
         </a>
         <a href="#">
             <i class="fa fa-instagram mr-3"></i>
@@ -142,7 +189,7 @@
         </a>
     </div>
     <div class="footer-copyright py-1">
-        Fenya krasava sex Zubritski ©
+        CREATED BY: <a href="https://www.instagram.com/a.zubritski/">@a.zubritski</a>
     </div>
 </footer>
 
@@ -150,26 +197,18 @@
 
 
 <!-- SCRIPTS -->
-<!-- JQuery -->
+
+<!--JQuery -->
 <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-<!-- Bootstrap tooltips -->
-<script type="text/javascript" src="js/popper.min.js"></script>
-<!-- Bootstrap core JavaScript -->
+<!-- Bootstrap JavaScript -->
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
-<!-- MDB core JavaScript -->
-<script type="text/javascript" src="js/mdb.min.js"></script>
-<!-- Cart core JavaScript -->
+<!-- Goods JavaScript -->
 <script type="text/javascript" src="js/goods.js"></script>
-
-<!-- Admin core JavaScript -->
+<!-- Admin JavaScript -->
 <script type="text/javascript" src="js/admin_data.js"></script>
-<script type="text/javascript" src="js/admin_store.js"></script>
-<script type="text/javascript" src="js/admin.js"></script>
 
-<script>
-    const app = new App(INITIAL_DATA, 'ourDataView', 'myEditForm');
-    app.run();
-</script>
+
+
 
 
 

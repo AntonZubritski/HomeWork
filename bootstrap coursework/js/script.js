@@ -68,13 +68,13 @@ let btnClick = e => {
 
 /*---------------------Goods Render-----------------------*/
 const renderCards = notes => {
-    return document.querySelector('#goodsItem').innerHTML = notes.map(note => {
+    return document.querySelector('#goodsItem').innerHTML = notes.map((note, index) => {
         return (
             `<div class="col-lg-3 col-md-6 mb-4" >
                      <div class="card">
                          <div class="view overlay">
                              <img class="card-img-top" src="${note.img}" alt="">
-                             <a href="#">
+                             <a href="">
                                  <div class="mask rgba-white-slight"></div>
                              </a>
                          </div>
@@ -92,13 +92,62 @@ const renderCards = notes => {
                                  <strong>${note.cost}$</strong>
                              </h4>
                              
-                             <button type="submit" data-id = ${note.id} data-toggle="modal" data-target="#myModal" class="btn btn-md my-0 btnGoods" onclick="btnClick(this); renderModal(this)">
-                                 Добавить в корзину <i class="fa fa-shopping-cart ml-1"></i>
+                             <button type="submit" data-id = ${note.id} data-toggle="modal" data-target="#myModal${index + 1}" class="btn btn-md my-0 btnGoods">
+                                 Подробнее<i class="fa fa-shopping-cart ml-1"></i>
                              </button>
                              
                     </form>
                          </div>
                      </div>
+                </div>
+                
+                <div class="modal fade" id="myModal${index + 1}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-body modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+
+                    <div class="container dark-grey-text">
+                        <div class="row wow fadeInn">
+                            <div class="col-md-4 mb-4">
+                                <img id="imgModal" src="${note.img}" alt="fenyaPic" class="img-fluid img-thumbnail">
+                            </div>
+                            <div class="col-md-8 mb-4">
+                                <div class="p-4">
+                                    <div class="mb-3">
+                                        <a href="">
+                                            <span class="badge purple mr-1">Категория 2</span>
+                                        </a>
+                                        <a href="">
+                                            <span class="badge blue mr-1">NEW</span>
+                                        </a>
+                                        <a href="">
+                                            <span class="badge red mr-1">Топчик!</span>
+                                        </a>
+                                    </div>
+                                    <p class="lead">
+                                        <span class="mr-1">
+                                            <del id="oldCostModal">${note.oldCost}$</del>
+                                        </span>
+                                        <span class="mr-1" id="costModal">${note.cost}$</span>
+                                    </p>
+                                    <p class="lead font-weight-bold" id="nameModal">${note.name}</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Assumenda at deleniti dicta dolor ex harum illo in modi
+                                        molestias nulla numquam perferendis porro quae quasi quod
+                                        rem veniam, voluptas voluptatum.
+                                    </p>
+                                    <form class="d-flex justify-content-left">
+                                        <input type="number" value="1" aria-label="search"
+                                               style="width: 50px;" class="form-control">
+                                        <button type="button" onclick="btnClick(this)" class="btn green btn-md my-0 p">
+                                            Добавить в корзину <i class="fa fa-shopping-cart ml-1"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
                 </div>`
         )
     }).join("");

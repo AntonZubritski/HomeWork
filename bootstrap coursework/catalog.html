@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Catalog ADp</title>
-  <!-- Font Awesome -->
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
-  <!-- Bootstrap core CSS -->
+
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <!-- Material Design Bootstrap -->
+->
   <link href="css/mdb.min.css" rel="stylesheet">
-  <!-- Your custom styles (optional) -->
+
   <link href="css/style.css" rel="stylesheet">
-  <!-- Slider -->
+
   <link href="css/slider.css" rel="stylesheet">
 </head>
 <body>
@@ -61,7 +61,7 @@
                 <div class="dropdown">
                     <a href="registration.html" class="dark-grey-text" data-toggle="dropdown">SIGN IN
                     </a>
-                    <form class="dropdown-menu p-4 mr-2 drop-left">
+                    <form action="admin.html" onsubmit="return adminPanelInn();" class="dropdown-menu p-4 mr-2 drop-left">
                         <div class="form-group">
                             <label for="exampleDropdownFormEmail2">Email address</label>
                             <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="Email">
@@ -71,7 +71,7 @@
                             <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
                         </div>
                         <a href="registration.html">Регистрация</a>
-                        <button type="submit" class="btn green">Войти</button>
+                        <button  type="submit" id="btnClickReg" class="btn green">Войти</button>
                     </form>
                 </div>
             </div>
@@ -214,7 +214,7 @@
             <section class="text-center mb-4">
 
                 <!--Modal window-->
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<!--                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-body modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
 
@@ -251,7 +251,7 @@
                                     <form class="d-flex justify-content-left">
                                         <input type="number" value="1" aria-label="search"
                                                style="width: 50px;" class="form-control">
-                                        <button type="submit" class="btn green btn-md my-0 p">
+                                        <button type="button" onclick="btnClick(this)" class="btn green btn-md my-0 p">
                                             Добавить в корзину <i class="fa fa-shopping-cart ml-1"></i>
                                         </button>
                                     </form>
@@ -261,7 +261,7 @@
                     </div>
                 </div>
                     </div>
-                </div>
+                </div>-->
 
                 <div class="row wow fadeIn" id="goodsItem">
 
@@ -322,12 +322,9 @@
   <!-- SCRIPTS -->
   <!-- JQuery -->
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
   <!-- Bootstrap core JavaScript -->
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Anime JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
   <!-- Slider core JavaScript -->
   <script src="js/slide.js"></script>
@@ -337,7 +334,8 @@
     <script type="text/javascript" src="js/cart.js"></script>
   <!-- Cart core JavaScript -->
   <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/modal.js"></script>
+  <!-- Reg JavaScript -->
+  <script type="text/javascript" src="js/registration.js"></script>
 
 
 </body>

@@ -43,7 +43,7 @@ let catalog = '/Desktop/Home/bootstrap%20coursework/catalog.html';
 let cart = '/Desktop/Home/bootstrap%20coursework/cart.html';
 
 
-if (window.location.pathname == catalog || cart){
+if (window.location.pathname === catalog || cart){
 window.onload = function(){
     counter();
     renderTable();
