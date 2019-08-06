@@ -16,9 +16,15 @@ let cat = document.getElementById('cat');
 let operation = 'C'; //"C"=Сreate
 let selected_index = -1; //Индекс выбранного элемента в списке
 
-// localStorage.setItem('tblPersons', JSON.stringify(goods));
+// Добавление Товаров из Goods.js в tblPersons
+const localCopy = localStorage.getItem('tblPersons');
+console.log(localCopy);
 
-let tblPersons = localStorage.getItem('tblPersons'); //вернуть сохраненные данные
+
+localStorage.setItem('tblPersons', JSON.stringify(goods));
+let tblPersons = localCopy !== null ? localCopy : localStorage.getItem('tblPersons');
+
+// let tblPersons = localStorage.getItem('tblPersons'); //вернуть сохраненные данные
 tblPersons = JSON.parse(tblPersons); //преобразовать строку в объект
 
 
@@ -31,32 +37,35 @@ tblPersons = JSON.parse(tblPersons); //преобразовать строку �
 
     function Create() {
         // Получить входные значения в HTML и преобразовать их в строку
-        let person = JSON.stringify({
+        let person = {
             name: name.value,
             cost: cost.value,
             oldCost: oldCost.value,
             img: img.value,
             stat: stat.value,
             cat: cat.value
-        });
+        };
 
         tblPersons.push(person);
+        console.log(tblPersons);
+
         // Сохраняем данные в localStorage
         localStorage.setItem("tblPersons", JSON.stringify(tblPersons));
         alert("Данный сохранены"); //Оповещение
+        List();
         return true;
     }
 
     function Edit() {
         // Редактировать выбранный элемент в таблице
-        tblPersons[selected_index] = JSON.stringify({
+        tblPersons[selected_index] = {
             name: name.value,
             cost: cost.value,
             oldCost: oldCost.value,
             img: img.value,
             stat: stat.value,
             cat: cat.value
-        });
+        };
 
         //Хранить предметы в localStorage
         localStorage.setItem("tblPersons", JSON.stringify(tblPersons));
@@ -95,7 +104,7 @@ tblPersons = JSON.parse(tblPersons); //преобразовать строку �
 
 
         for (let i in tblPersons) {
-            let per = JSON.parse(tblPersons[i]);
+            let per = tblPersons[i];
             let tbody = document.querySelector('#tblList tbody');
 
             tbody.innerHTML += `<tr> 
@@ -195,11 +204,11 @@ tblPersons = JSON.parse(tblPersons); //преобразовать строку �
         console.log(selected_index); //номер элемента
 
         // Конвертация JSON в правильный формат для элементов, подлежащих редактированию
-        let per = JSON.parse(tblPersons[selected_index]);
+        let per = tblPersons[selected_index];
         name.value = per.name;
         cost.value = per.cost;
         oldCost.value = per.oldCost;
-        img.value = per.img;
+
         stat.value = per.stat;
         cat.value = per.cat;
 

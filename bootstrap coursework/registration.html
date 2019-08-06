@@ -5,25 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Material Design Bootstrap</title>
-    <!-- Font Awesome -->
+
+    <title>ADParacord</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
-    <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
-    <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Slider -->
     <link href="css/slider.css" rel="stylesheet">
 
 </head>
 <body>
+
     <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
         <div class="container">
-            <a href="#" class="navbar-brand">
-                <img class="img-size" src="img/IMG_8326.png" onclick="this.setAttribute('src','img/IMG_8326green.png')"
-                     alt="LOGO" >
+            <a href="home.html" class="navbar-brand">
+                <img class="img-size" src="img/IMG_8326.png" onmouseover="this.setAttribute('src','img/IMG_8326green.png')"
+                     onmouseout="this.setAttribute('src','img/IMG_8326.png')" alt="LOGO" >
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
                     aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,8 +45,8 @@
                 </ul>
                 <ul class="navbar-nav nav-flex-icons">
                     <li class="nav-item">
-                        <a href="#" class="nav-link waves-effect">
-                            <span class="badge green z-depth-1 mr-1" data-qantity="0">0</span>
+                        <a href="cart.html" class="nav-link waves-effect">
+                            <span class="badge green z-depth-1 mr-1" id="counter" data-qantity="0">0</span>
                             <i class="fa fa-shopping-cart"></i>
                             <span class="clearfix d-none d-sm-inline-block">Корзина</span>
                         </a>
@@ -61,80 +59,75 @@
                 </ul>
 
                 <div class="dropdown">
-                    <a href="#" class="dark-grey-text" data-toggle="dropdown">SIGN IN
+                    <a href="registration.html" class="dark-grey-text" data-toggle="dropdown">SIGN IN
                     </a>
                     <form class="dropdown-menu p-4 mr-2 drop-left">
-                        <div class="form-group">
-                            <label for="exampleDropdownFormEmail2">Email address</label>
-                            <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="Email">
+                        <div class="mb-1">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email">
                         </div>
-                        <div class="form-group">
-                            <label for="exampleDropdownFormPassword2">Password</label>
-                            <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+                        <div class="mb-1">
+                            <label for="password">Password</label>
+                            <input type="password" class=" form-control" id="password" placeholder="Password">
                         </div>
-                        <a href="#">Регистрация</a>
-                        <button type="submit" class="btn green">Войти</button>
+                        <a href="registration.html">Регистрация</a>
+                        <button  type="submit" class="btn green btnClickReg">Войти</button>
                     </form>
                 </div>
             </div>
         </div>
     </nav>
-    <div class="container mt-7">
+    <div class="container mt-6">
         <div class="row justify-content-center">
             <div class="col-md-offset-3 col-md-6">
                 <div class="tab" role="tabpanel">
+
                     <!-- Nav tabs -->
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">sign in</a></li>
-                        <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">sign up</a></li>
+                    <ul class="nav nav-tabs pl-3 pr-3 border-0" id="navBtnSign" role="tablist">
+                        <li role="presentation" class="active mr-5"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">Авторизация</a></li>
+                        <li role="presentation" class="mr-5"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">Регистрация</a></li>
                     </ul>
+
                     <!-- Tab panes -->
-                    <div class="tab-content tabs">
+                    <div class="tab-content tabs mt-3">
                         <div role="tabpanel" class="tab-pane fade in active show" id="Section1">
-                            <form class="form-horizontal">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">username</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1">
+                            <form class="form-horizontal" id="formPersonData">
+                                <div class="mb-1">
+                                    <label for="email2">Email</label>
+                                    <input type="email" id="email2" class=" form-control">
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                <div class="mb-1">
+                                    <label for="password2">Password</label>
+                                    <input type="password" id="password2" class=" form-control">
                                 </div>
-                                <div class="form-group">
-                                    <div class="main-checkbox">
-                                        <input value="None" id="checkbox1" name="check" type="checkbox">
-                                        <label for="checkbox1"></label>
+                                <!--<div id="warningText" class=""></div>-->
+                                    <div class="mb-1 mt-3">
+                                        <button type="submit" class="btn btn-default btnClickReg">Войти</button>
                                     </div>
-                                    <span class="text">Keep me Signed in</span>
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-default">Sign in</button>
-                                </div>
-                                <div class="form-group forgot-pass">
-                                    <button type="submit" class="btn btn-default">forgot password</button>
-                                </div>
                             </form>
                         </div>
                         <div role="tabpanel" class="tab-pane fade" id="Section2">
                             <form class="form-horizontal">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">First Name</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1">
+                                <div class="mb-1">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" class="form-control" id="firstName">
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Last Name</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1">
+                                <div class="mb-1">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName">
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1">
+                                <div class="mb-1">
+                                    <label for="inputEmail2">Email address</label>
+                                    <input type="email" class="form-control" id="inputEmail2">
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword">
+                                <div class="mb-1">
+                                    <label for="inputPassword2">Password</label>
+                                    <input type="password" class="form-control" id="inputPassword2">
                                 </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-default">Sign up</button>
+                                <div class="mb-1">
+                                    <div id="warningText" class="red-text"></div>
+                                    <div id="warningText2" class="green-text"></div>
+                                    <button type="button" id="btnPersonData" class="btn btn-default">Зарегестрировать</button>
                                 </div>
                             </form>
                         </div>
@@ -143,7 +136,7 @@
             </div>
         </div>
     </div>
-    <footer class="page-footer text-center font-small fadeIn">
+    <footer class="page-footer  fixed-bottom text-center font-small ">
         <hr class="mt-1">
         <div class="pb-4">
             <a href="#">
@@ -168,9 +161,6 @@
                 <i class="fa fa-github mr-3"></i>
             </a>
         </div>
-        <div class="footer-copyright py-3">
-            CREATED BY: <a href="https://www.instagram.com/a.zubritski/">@a.zubritski</a>
-        </div>
     </footer>
 
 <!-- SCRIPTS -->
@@ -182,8 +172,9 @@
 <script type="text/javascript" src="js/goods.js"></script>
 <!-- Cart core JavaScript -->
 <script type="text/javascript" src="js/cart.js"></script>
-<!-- Cart core JavaScript -->
-<script type="text/javascript" src="js/script.js"></script>
+<!-- Registration JavaScript -->
+<script type="text/javascript" src="js/registration.js"></script>
+
 
 
 </body>

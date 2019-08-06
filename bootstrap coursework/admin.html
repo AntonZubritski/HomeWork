@@ -9,14 +9,11 @@
     <title>AdminAD</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
-
     <link href="css/mdb.min.css" rel="stylesheet">
-
     <link href="css/style.css" rel="stylesheet">
-</head>
 
+</head>
 <body>
 <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
     <div class="container">
@@ -44,18 +41,19 @@
                 </li>
             </ul>
             <div class="dropdown">
-                <a href="registration.html" class="dark-grey-text" data-toggle="dropdown">SIGN IN</a>
+                <a href="registration.html" class="dark-grey-text" data-toggle="dropdown">SIGN IN
+                </a>
                 <form class="dropdown-menu p-4 mr-2 drop-left">
-                    <div class="form-group">
-                        <label for="exampleDropdownFormEmail2">Email address</label>
-                        <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="Email">
+                    <div class="mb-1">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email">
                     </div>
-                    <div class="form-group">
-                        <label for="exampleDropdownFormPassword2">Password</label>
-                        <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+                    <div class="mb-1">
+                        <label for="password">Password</label>
+                        <input type="password" class=" form-control" id="password" placeholder="Password">
                     </div>
                     <a href="registration.html">Регистрация</a>
-                    <button type="submit" class="btn green">Войти</button>
+                    <button  type="submit" class="btn green btnClickReg">Войти</button>
                 </form>
             </div>
         </div>
@@ -103,11 +101,11 @@
                             <input type="text" id="stat" class="form-control" placeholder="Пример: NEW или ничего">
                         </div>
                     </div>
-                    <td>
+                    <div class=" col-12">
                         <select id="cat">
 
                         </select>
-                    </td>
+                    </div>
                     <div class="form-group mt-2">
                         <div class="col-lg-offset-2 col-sm-4">
                             <input type="submit" value="Записать" id="btnSave" class="btn white-text btn-gr" onclick=""/>
@@ -160,7 +158,7 @@
 
 <!------------Tbl Inn--------------->
 <div class="container">
-    <table id="tblList" class="table table-bordered"></table>
+    <table id="tblList" class="tblList table table-bordered"></table>
 </div>
 
 <footer class="footer page-footer text-center font-small  ">
@@ -206,6 +204,10 @@
 <script type="text/javascript" src="js/goods.js"></script>
 <!-- Admin JavaScript -->
 <script type="text/javascript" src="js/admin_data.js"></script>
+<!-- Cart core JavaScript -->
+<script type="text/javascript" src="js/cart.js"></script>
+<!-- Registration JavaScript -->
+<script type="text/javascript" src="js/registration.js"></script>
 
 
 

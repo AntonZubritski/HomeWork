@@ -3,7 +3,7 @@
 
 
 /*---------------------Pagination-----------------------*/
-let notesOnPage = 4; /*Колличество элементов на странице*/
+let notesOnPage = 8; /*Колличество элементов на странице*/
 let paginationAmount = Math.ceil(goods.length / notesOnPage);
 
 let pagination = document.getElementById('pagination');
@@ -45,7 +45,7 @@ const paginationActiveAmount = () => {
 
 let btnClick = e => {
     let id = e.getAttribute('data-id');
-
+    console.log(id);
     if (e.classList.contains('active')) {
 
         e.classList.remove("active");
@@ -105,48 +105,48 @@ const renderCards = notes => {
                     <div class="modal-body modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
 
-                    <div class="container dark-grey-text">
-                        <div class="row wow fadeInn">
-                            <div class="col-md-4 mb-4">
-                                <img id="imgModal" src="${note.img}" alt="fenyaPic" class="img-fluid img-thumbnail">
-                            </div>
-                            <div class="col-md-8 mb-4">
-                                <div class="p-4">
-                                    <div class="mb-3">
-                                        <a href="">
-                                            <span class="badge purple mr-1">Категория 2</span>
-                                        </a>
-                                        <a href="">
-                                            <span class="badge blue mr-1">NEW</span>
-                                        </a>
-                                        <a href="">
-                                            <span class="badge red mr-1">Топчик!</span>
-                                        </a>
+                            <div class="container dark-grey-text">
+                                <div class="row wow fadeInn">
+                                    <div class="col-md-4 mb-4">
+                                        <img id="imgModal" src="${note.img}" alt="fenyaPic" class="img-fluid img-thumbnail">
                                     </div>
-                                    <p class="lead">
-                                        <span class="mr-1">
-                                            <del id="oldCostModal">${note.oldCost}$</del>
-                                        </span>
-                                        <span class="mr-1" id="costModal">${note.cost}$</span>
-                                    </p>
-                                    <p class="lead font-weight-bold" id="nameModal">${note.name}</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Assumenda at deleniti dicta dolor ex harum illo in modi
-                                        molestias nulla numquam perferendis porro quae quasi quod
-                                        rem veniam, voluptas voluptatum.
-                                    </p>
-                                    <form class="d-flex justify-content-left">
-                                        <input type="number" value="1" aria-label="search"
-                                               style="width: 50px;" class="form-control">
-                                        <button type="button" onclick="btnClick(this)" class="btn green btn-md my-0 p">
-                                            Добавить в корзину <i class="fa fa-shopping-cart ml-1"></i>
-                                        </button>
-                                    </form>
+                                    <div class="col-md-8 mb-4">
+                                        <div class="p-4">
+                                            <div class="mb-3">
+                                                <a href="">
+                                                    <span class="badge purple mr-1">Категория 2</span>
+                                                </a>
+                                                <a href="">
+                                                    <span class="badge blue mr-1">NEW</span>
+                                                </a>
+                                                <a href="">
+                                                    <span class="badge red mr-1">Топчик!</span>
+                                                </a>
+                                            </div>
+                                            <p class="lead">
+                                                <span class="mr-1">
+                                                    <del id="oldCostModal">${note.oldCost}$</del>
+                                                </span>
+                                                <span class="mr-1" id="costModal">${note.cost}$</span>
+                                            </p>
+                                            <p class="lead font-weight-bold" id="nameModal">${note.name}</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                Assumenda at deleniti dicta dolor ex harum illo in modi
+                                                molestias nulla numquam perferendis porro quae quasi quod
+                                                rem veniam, voluptas voluptatum.
+                                            </p>
+                                            <form class="d-flex justify-content-left">
+                                                <input type="number" value="1" aria-label="search"
+                                                       style="width: 50px;" class="form-control">
+                                                <button type="button" data-id = ${note.id} onclick="btnClick(this)" class="btn green btn-md my-0 p">
+                                                    Добавить в корзину <i class="fa fa-shopping-cart ml-1"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
                     </div>
                 </div>`
         )
@@ -173,7 +173,6 @@ const btnActiveGood = () => {
 
 
 
-if (window.location.pathname == '/Desktop/Home/bootstrap%20coursework/catalog.html' || '/Desktop/Home/bootstrap%20coursework/cart.html') {
     window.onload = function(){
         let pageNum = 1;
         let start = (pageNum - 1) * notesOnPage;
@@ -185,7 +184,7 @@ if (window.location.pathname == '/Desktop/Home/bootstrap%20coursework/catalog.ht
         btnActiveGood();
         document.querySelector(".page-item").classList.add("active");
 
-    }}
+    }
 
 
 

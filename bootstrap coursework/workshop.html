@@ -5,142 +5,139 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Material Design Bootstrap</title>
-    <!-- Font Awesome -->
+
+    <title>ADParacord</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
-    <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
-    <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
 
 </head>
 <body>
-<nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
-    <div class="container">
-        <a href="#" class="navbar-brand">
-            <img class="img-size" src="img/IMG_8326.png" onclick="this.setAttribute('src','img/IMG_8326green.png')"
-                 alt="LOGO" >
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
-                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+        <div class="container">
+            <a href="home.html" class="navbar-brand">
+                <img class="img-size" src="img/IMG_8326.png" onmouseover="this.setAttribute('src','img/IMG_8326green.png')"
+                     onmouseout="this.setAttribute('src','img/IMG_8326.png')" alt="LOGO" >
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
 
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a href="workshop.html" class="nav-link waves-effect">Мастерская</a>
-                </li>
-                <li class="nav-item ">
-                    <a href="home.html" class="nav-link waves-effect">О нас</a>
-                </li>
-                <li class="nav-item">
-                    <a href="catalog.html" class="nav-link waves-effect">Каталог</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link waves-effect">Контакты</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav nav-flex-icons">
-                <li class="nav-item">
-                    <a href="cart.html" class="nav-link waves-effect">
-                        <span class="badge green z-depth-1 mr-1" data-qantity="0">0</span>
-                        <i class="fa fa-shopping-cart"></i>
-                        <span class="clearfix d-none d-sm-inline-block">Корзина</span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a href="workshop.html" class="nav-link waves-effect">Мастерская</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="home.html" class="nav-link waves-effect">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="catalog.html" class="nav-link waves-effect">Каталог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link waves-effect">Контакты</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav nav-flex-icons">
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link waves-effect">
+                            <span class="badge green z-depth-1 mr-1" id="counter" data-qantity="0">0</span>
+                            <i class="fa fa-shopping-cart"></i>
+                            <span class="clearfix d-none d-sm-inline-block">Корзина</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link waves-effect">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="dropdown">
+                    <a href="registration.html" class="dark-grey-text" data-toggle="dropdown">SIGN IN
                     </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link waves-effect">
-                        <i class="fa fa-instagram"></i>
-                    </a>
-                </li>
-            </ul>
-
-            <div class="dropdown">
-                <a href="#" class="dark-grey-text" data-toggle="dropdown">SIGN IN
-                </a>
-                <form class="dropdown-menu p-4 mr-2 drop-left">
-                    <div class="form-group">
-                        <label for="exampleDropdownFormEmail2">Email address</label>
-                        <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleDropdownFormPassword2">Password</label>
-                        <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
-                    </div>
-                    <a href="registration.html">Регистрация</a>
-                    <button type="submit" class="btn green">Войти</button>
-                </form>
+                    <form class="dropdown-menu p-4 mr-2 drop-left">
+                        <div class="mb-1">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                        <div class="mb-1">
+                            <label for="password">Password</label>
+                            <input type="password" class=" form-control" id="password" placeholder="Password">
+                        </div>
+                        <a href="registration.html">Регистрация</a>
+                        <button  type="submit" class="btn green btnClickReg">Войти</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<button type="button"  class=" mt-7 btn btn-primary" data-toggle="modal" data-target="#myModal">
-    Запустить модальное окно
-</button>
-
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+    <main>
+        <div class="min-vh-100 imgWork">
+            <div class=" h-work-50">
             </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+            <div>
+                <h2 class="text-center textWork container">
+                    <span>Носите красивые украшения каждый день. Ведь может быть именно сегодня
+                    вы выйдете на улицу и встретите Судьбу
+                    </span>
+                </h2>
             </div>
         </div>
-    </div>
-</div>
+        <hr class="green">
+        <div class="withBlockWork min-vw-80 row">
+            <div class=" col-lg-6 col-md-12 textWork2">
+                <div class="container">
+                    <span>
+                    «Мне хотелось передать ощущение воздушной легкости и сделать акцент на
+                    кружеве, которое наряду с лентами, шелком и драпировками является неотъемлемой
+                    частью художественного языка»
+                    </span>
+                </div>
+            </div>
+            <div class="mt-5 col-lg-6 col-md-12 imgWork2">
+
+            </div>
+        </div>
 
 
+    </main>
 
-
-
-<main class="container">
-</main>
-
-<footer class="fixed-bottom page-footer text-center font-small mt-4 fadeIn">
-    <div class="pt-4 footer_head">
-        FOLLOW AD PARACORD
-    </div>
-    <hr class="mt-1">
-    <div class="pb-4">
-        <a href="#">
-            <i class="fa fa-vk mr-3"></i>
-        </a>
-        <a href="#">
-            <i class="fa fa-facebook mr-3"></i>
-        </a>
-        <a href="#">
-            <i class="fa fa-twitter mr-3"></i>
-        </a>
-        <a href="#">
-            <i class="fa fa-youtube mr-3"></i>
-        </a>
-        <a href="#">
-            <i class="fa fa-telegram mr-3"></i>
-        </a>
-        <a href="#">
-            <i class="fa fa-instagram mr-3"></i>
-        </a>
-        <a href="#">
-            <i class="fa fa-github mr-3"></i>
-        </a>
-    </div>
-    <div class="footer-copyright py-3">
-        CREATED BY: <a href="https://www.instagram.com/a.zubritski/">@a.zubritski</a>
-    </div>
-</footer>
+    <footer class="page-footer text-center font-small mt-4 fadeIn">
+        <div class="pt-4">
+            FOLLOW AD PARACORD
+        </div>
+        <hr class="mt-1">
+        <div class="pb-4">
+            <a href="#">
+                <i class="fa fa-vk mr-3"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-facebook mr-3"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-twitter mr-3"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-youtube mr-3"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-telegram mr-3"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-instagram mr-3"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-github mr-3"></i>
+            </a>
+        </div>
+        <div class="footer-copyright py-3">
+            CREATED BY: <a href="https://www.instagram.com/a.zubritski/">@a.zubritski</a>
+        </div>
+    </footer>
 
 
 
@@ -154,8 +151,8 @@
 <script type="text/javascript" src="js/goods.js"></script>
 <!-- Cart core JavaScript -->
 <script type="text/javascript" src="js/cart.js"></script>
-<!-- Cart core JavaScript -->
-<script type="text/javascript" src="js/script.js"></script>
+<!-- Registration JavaScript -->
+<script type="text/javascript" src="js/registration.js"></script>
 
 </body>
 

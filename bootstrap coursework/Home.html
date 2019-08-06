@@ -5,24 +5,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Material Design Bootstrap</title>
-    <!-- Font Awesome -->
+
+    <title>ADParacord</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
-    <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
-    <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Slider -->
     <link href="css/slider.css" rel="stylesheet">
+
 </head>
 <body>
 <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
     <div class="container">
-        <a href="#" class="navbar-brand">
-            <img class="img-size" src="img/IMG_8326.png" onclick="this.setAttribute('src','img/IMG_8326green.png')"
-                 alt="LOGO" >
+        <a href="home.html" class="navbar-brand">
+            <img class="img-size" src="img/IMG_8326.png" onmouseover="this.setAttribute('src','img/IMG_8326green.png')"
+                 onmouseout="this.setAttribute('src','img/IMG_8326.png')" alt="LOGO" >
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
                 aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,7 +45,7 @@
             <ul class="navbar-nav nav-flex-icons">
                 <li class="nav-item">
                     <a href="cart.html" class="nav-link waves-effect">
-                        <span class="badge green z-depth-1 mr-1" data-qantity="0">0</span>
+                        <span class="badge green z-depth-1 mr-1" id="counter" data-qantity="0">0</span>
                         <i class="fa fa-shopping-cart"></i>
                         <span class="clearfix d-none d-sm-inline-block">Корзина</span>
                     </a>
@@ -58,21 +56,20 @@
                     </a>
                 </li>
             </ul>
-
             <div class="dropdown">
                 <a href="registration.html" class="dark-grey-text" data-toggle="dropdown">SIGN IN
                 </a>
                 <form class="dropdown-menu p-4 mr-2 drop-left">
-                    <div class="form-group">
-                        <label for="exampleDropdownFormEmail2">Email address</label>
-                        <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="Email">
+                    <div class="mb-1">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email">
                     </div>
-                    <div class="form-group">
-                        <label for="exampleDropdownFormPassword2">Password</label>
-                        <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+                    <div class="mb-1">
+                        <label for="password">Password</label>
+                        <input type="password" class=" form-control" id="password" placeholder="Password">
                     </div>
                     <a href="registration.html">Регистрация</a>
-                    <button type="submit" class="btn green">Войти</button>
+                    <button  type="submit" class="btn green btnClickReg">Войти</button>
                 </form>
             </div>
         </div>
@@ -104,7 +101,7 @@
                     <span class="excerpt">Отлично сидит на руке</span>
                     <span class="link">
                         <div class="fill"></div>
-                        <a href="shop-page.html">Открыть каталог</a>
+                        <a href="catalog.html">Открыть каталог</a>
                     </span>
                 </span>
             </span>
@@ -131,7 +128,7 @@
                             <span class="excerpt">Удобно спать</span>
                             <span class="link">
                                 <div class="fill fill-dark"></div>
-                                <a href="shop-page.html">Открыть каталог</a>
+                                <a href="catalog.html">Открыть каталог</a>
                             </span>
                         </span>
                     </span>
@@ -147,7 +144,7 @@
             <span class="front__element">
                         <img src="img/Whater%20fenya.png" />
                     </span>
-            <span class="front__element">
+            <span class="front__element element3">
                         <img src="img/Whater%20front.png" />
                     </span>
             <span class="title__element">
@@ -158,8 +155,8 @@
                             <span class="headline">Феня №3</span>
                             <span class="excerpt">Увеличивает потенцию</span>
                             <span class="link">
-                                <div class="fill"></div>
-                                <a href="shop-page.html">Открыть каталог</a>
+                                <div class="fill fill-blue"></div>
+                                <a href="catalog.html">Открыть каталог</a>
                         </span>
                         </span>
                     </span>
@@ -176,33 +173,30 @@
 <div class="conteiner-fluid nav-goods pt-1 pb-1 mb-3">
 </div>
 
-<div class="container">
-    <ul class="nav  mr-auto text-center ">
-        <li class=" blockquote col-4">
+<div class="container row text-center col-12">
+        <div class="col-lg-4 col-md-12 blockquote">
             <h5 class="font-weight-bold">№1</h5>
             <p class="small lead blockquote-footer font-weight-lighter ">Необходимо сделать клиентскую часть сайта-каталога.
-                Сайт должен корректно отображаться в браузерах Chrom, Safari, Opera и др.</p>
-        </li>
-
-        <li class="blockquote col-4  ">
+                Сайт должен корректно отображаться в браузерах Chrome, Safari, Opera и др.</p>
+        </div>
+        <div class="col-lg-4 col-md-12 blockquote">
             <h5 class="font-weight-bold">КАЧЕСТВО</h5>
             <p class="small lead blockquote-footer font-weight-lighter">Необходимо сделать клиентскую часть сайта-каталога.
                 Сайт должен корректно отображаться в браузерах Chrom, Safari, Opera и др.</p>
-        </li>
+        </div>
+        <div class="col-lg-4 col-md-12 blockquote">
 
-        <li class="blockquote col-4">
             <h5 class="font-weight-bold">УНИКАЛЬНО</h5>
             <p class="small lead blockquote-footer font-weight-lighter">Необходимо сделать клиентскую часть сайта-каталога.
                 Сайт должен корректно отображаться в браузерах Chrom, Safari, Opera и др.</p>
-        </li>
-    </ul>
+        </div>
 </div>
 
 <main class="container">
 </main>
 
 <footer class="page-footer text-center font-small mt-4 fadeIn">
-    <div class="pt-4 footer_head">
+    <div class="pt-4">
         FOLLOW AD PARACORD
     </div>
     <hr class="mt-1">
@@ -250,8 +244,9 @@
 <script type="text/javascript" src="js/goods.js"></script>
 <!-- Cart core JavaScript -->
 <script type="text/javascript" src="js/cart.js"></script>
-<!-- Cart core JavaScript -->
-<script type="text/javascript" src="js/script.js"></script>
+<!-- Registration JavaScript -->
+<script type="text/javascript" src="js/registration.js"></script>
+
 
 </body>
 
