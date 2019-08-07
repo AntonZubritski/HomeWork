@@ -2,7 +2,7 @@ html, body, .view{
    min-height: 100%;
 }
 
-
+input[type="text"]::placeholder { color: rgba(255, 255, 255, 0.7); }
 .nav-goods, .page-footer-color{
     background: rgb(13, 87, 29);
     background: linear-gradient(90deg,
@@ -47,6 +47,9 @@ html, body, .view{
 }
 .img-size {
     max-width: 5vw;
+}
+.form-control{
+
 }
 
 .modal-dialog.modal-notify.modal-primary .badge,

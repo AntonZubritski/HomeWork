@@ -132,8 +132,6 @@ const renderCards = notes => {
                                                 rem veniam, voluptas voluptatum.
                                             </p>
                                             <form class="d-flex justify-content-left">
-                                                <input type="number" value="1" aria-label="search"
-                                                       style="width: 50px;" class="form-control">
                                                 <button type="button" data-id = ${note.id} onclick="btnClick(this)" class="btn green btn-md my-0 p">
                                                     Добавить в корзину <i class="fa fa-shopping-cart ml-1"></i>
                                                 </button>
