@@ -1,3 +1,4 @@
+"use strict";
 
 let email = document.getElementById('email');
 let password = document.getElementById('password');
@@ -9,18 +10,6 @@ let btnRegClick = document.querySelectorAll('.btnClickReg');
 let btnPersonData = document.getElementById('btnPersonData');
 let dataPersons = localStorage.getItem('dataPersons');
 
-/*---------------------Button sign in-----------------------*/
-// btnRegClick.forEach(function (regClick) {
-//     regClick.addEventListener('click', function () {
-//         if (email.value == dataPersons[0].inputEmail && password.value === dataPersons[0].inputPassword) {
-//             window.open('admin.html')
-//         } else if (email2.value == dataPersons[0].inputEmail && password2.value === dataPersons[0].inputPassword) {
-//             window.open('admin.html')
-//         } else {
-//             // return warningText.innerHTML = 'Отказано'
-//         }
-//     })
-// });
 
 btnRegClick.forEach(regClick => {
     regClick.addEventListener('click', function () {
@@ -32,9 +21,6 @@ btnRegClick.forEach(regClick => {
 
                     if (email2.value == dataPersons[i].inputEmail && password2.value == dataPersons[i].inputPassword) {
                         window.open('admin.html')
-                    } else {
-                        // return warningText.innerHTML = 'Отказано'
-                        console.log('1');
                     }
                 }
             }
@@ -80,7 +66,6 @@ function Create() {
     };
 
     dataPersons.push(person);
-    console.log(dataPersons);
     // Сохраняем данные в localStorage
     localStorage.setItem("dataPersons", JSON.stringify(dataPersons));
     alert("Данный сохранены"); //Оповещение
@@ -108,24 +93,3 @@ if (btnPersonData !== null) {
         adminLogin();
     }
 }
-
-
-
-// function Registr() {
-//     var login=document.getElementById("log").value;
-//     var password=document.getElementById("passw").value;
-//
-//     if(login == 'Ivan76Russ') {
-//         if(password == '25565'){
-//             window.open('Site.html');
-//         }
-//         else{
-//             alert('Неверный пароль');
-//         }
-//     }
-//     else{
-//         alert('Неверный логин');
-//     }
-//
-//     return false;
-// }

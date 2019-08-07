@@ -18,8 +18,6 @@ let selected_index = -1; //Индекс выбранного элемента в
 
 // Добавление Товаров из Goods.js в tblPersons
 const localCopy = localStorage.getItem('tblPersons');
-console.log(localCopy);
-
 
 localStorage.setItem('tblPersons', JSON.stringify(goods));
 let tblPersons = localCopy !== null ? localCopy : localStorage.getItem('tblPersons');
@@ -27,13 +25,9 @@ let tblPersons = localCopy !== null ? localCopy : localStorage.getItem('tblPerso
 // let tblPersons = localStorage.getItem('tblPersons'); //вернуть сохраненные данные
 tblPersons = JSON.parse(tblPersons); //преобразовать строку в объект
 
-
-
     if (tblPersons === null) { // если нет данных, запускаем пустой массив
         tblPersons = [];
     }
-
-
 
     function Create() {
         // Получить входные значения в HTML и преобразовать их в строку
@@ -45,9 +39,8 @@ tblPersons = JSON.parse(tblPersons); //преобразовать строку �
             stat: stat.value,
             cat: cat.value
         };
-
         tblPersons.push(person);
-        console.log(tblPersons);
+
 
         // Сохраняем данные в localStorage
         localStorage.setItem("tblPersons", JSON.stringify(tblPersons));
@@ -126,13 +119,7 @@ tblPersons = JSON.parse(tblPersons); //преобразовать строку �
         } //загрузить и вставить элементы в таблицу
     }
 
-
-
-
-
     //----------------------------Category----------------------------------
-
-
 
     cat.innerHTML = `${categoryArray.map(it => `<option>${it}</option>`)}`;
     categorysList.innerHTML = `${categoryArray.map(it => `<option>${it}</option>`)}`;
@@ -177,7 +164,6 @@ tblPersons = JSON.parse(tblPersons); //преобразовать строку �
 
 //--------------------------------------------------------------
 
-
     frmPerson.addEventListener('submit', function () {
         if (operation === 'C') {
             return Create();
@@ -186,37 +172,21 @@ tblPersons = JSON.parse(tblPersons); //преобразовать строку �
         }
 
     });
-
-
-
     List();
 
-
-
-
-
     function edi (e) {
-
         operation = 'E'; //'E' = Edit
         // Получить идентификатор элемента для редактирования
         selected_index = e.getAttribute('title').replace('Edit', '');
-
-        console.log(selected_index); //номер элемента
 
         // Конвертация JSON в правильный формат для элементов, подлежащих редактированию
         let per = tblPersons[selected_index];
         name.value = per.name;
         cost.value = per.cost;
         oldCost.value = per.oldCost;
-
         stat.value = per.stat;
         cat.value = per.cat;
-
-        console.log(per)
-
     }
-
-
 
     function del (e) {
         // Получить идентификатор элемента, который нужно удалить

@@ -1,3 +1,4 @@
+"use strict";
 
 let cartCount = [];
 let cartCountStor = "";
@@ -14,10 +15,6 @@ let counter = () => {
     count.innerText = "";
     count.innerText = cartCountStorSplit[0] === "" && cartCountStorSplit.length == 1 ? "" : cartCountStorSplit.length;
 };
-
-
-
-
 
 const renderTable = () => {
     container.innerHTML = goods.map((good, index) => {
@@ -54,58 +51,31 @@ function listeners() {
     document.querySelectorAll(".numberCartAmount").forEach( item =>{
 
         item.addEventListener("change", function(e){
-            let df = parseInt(document.querySelector(".cost").textContent);
 
-            console.log("wewe", parseInt(event.target.parentNode.parentNode.querySelector('.cost').textContent));
             let res = parseInt(event.target.parentNode.parentNode.querySelector('.cost').textContent) * e.target.value;
-            console.log(res);
             event.target.parentNode.parentNode.querySelector('#summCart').innerHTML = res;
 
-            console.log("wewe", Array.prototype.slice.call((document.querySelectorAll('#summCart'))));
-
             let sum = Array.prototype.slice.call((document.querySelectorAll('#summCart'))).reduce( (res, item) => {
-                console.log("item", parseInt(item.innerText));
-
-
                return  res += parseInt(item.innerText)
-
-            }, 0)
-
-
-
+            }, 0);
 
             document.querySelector(".text-center").innerHTML = sum;
-            console.log("summ", sum);
-    })
-
-
-    })
+    })})
 }
 
-console.log();
-const mathFunction = () => {
-    numberCartAmount = Array.from(numberCartAmount)
-    return numberCartAmount.reduce((result,item) => {
-        console.log(item);
-        result[item] = item.value;
-        return result;
-    },{})
 
-};
-const res = mathFunction();
-console.log("res", res);
+
+
 window.onload = function () {
     counter()
 };
 if (container !== null ) {
     window.onload = function(){
         counter();
-        renderTable()
+        renderTable();
         listeners()
     }
 }
 
-console.log("nubbdcd", numberCartAmount)
-console.log("document.querySelector(\".numberCartAmount\")", document.querySelector(".index"));
 
 
