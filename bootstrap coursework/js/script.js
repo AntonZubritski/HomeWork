@@ -19,7 +19,7 @@ const paginationActiveAmount = () => {
         let a = document.createElement('a');
         findLi.appendChild(a);
         let findA = document.querySelectorAll('#pagination li a')[i];
-        findA.classList.add('page-link');
+        findA.classList.add('page-link','cart-color');
         a.innerHTML = i + 1;
 
         let items = document.querySelectorAll('#pagination li a');
@@ -81,7 +81,7 @@ const renderCards = notes => {
                              <h5>
                                  <strong>
                                      <a href="#" class="dark-grey-text">${note.name}
-                                         <span class="badge badge-pill green">${note.stat}</span></a>
+                                         <span class="badge badge-pill cart-color">${note.stat}</span></a>
                                  </strong>
                              </h5>
                              <h4 class="font-weight-lighter light-green-text">
@@ -161,7 +161,6 @@ const btnActiveGood = () => {
 };
 
 
-
 /*---------------------Win.ONLOAD-----------------------*/
 // pagination.addEventListener('click', btnActiveGood());
 
@@ -175,5 +174,6 @@ const btnActiveGood = () => {
         counter();
         btnActiveGood();
         document.querySelector(".page-item").classList.add("active");
+
 
     };

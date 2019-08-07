@@ -37,12 +37,12 @@ const renderTable = () => {
                 </tr>`)}
                 return result;
     }).join("");
-           container.innerHTML += `<tr class="green">
+           container.innerHTML += `<tr class="cart-color">
                     <th scope="row">Итого</th>
                     <td colspan="5" class="text-center">0$</td>
                  </tr>`;
            containerFooter.innerHTML += `<div  class="col-md-12 text-center">
-        <button type="submit" class="btn green btn-lg">Заказать</button>
+        <button type="submit" class="btn cart-color btn-lg">Заказать</button>
         </div>`
 };
 

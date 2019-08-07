@@ -80,7 +80,7 @@ tblPersons = JSON.parse(tblPersons); //преобразовать строку �
 
         tblList.innerHTML = '';
         tblList.innerHTML = `
-            <thead>
+            <thead class="">
                 <tr>
                 <th>Товар</th>
                 <th>Цена</th>

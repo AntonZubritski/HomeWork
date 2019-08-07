@@ -3,14 +3,48 @@ html, body, .view{
 }
 
 
-.nav-goods, .page-footer{
+.nav-goods, .page-footer-color{
     background: rgb(13, 87, 29);
     background: linear-gradient(90deg,
     rgb(23, 131, 99) 0%,
     rgba(0, 0, 0, 0.91) 50%,
     rgb(23, 131, 99) 100%);
 }
+.cart-color{
+    background-color: #178363;
+}
 
+.nav-goods-color2, .page-footer-color2{
+    background: rgb(60, 37, 87);
+    background: linear-gradient(90deg,
+    rgb(92, 70, 131) 0%,
+    rgba(0, 0, 0, 0.91) 50%,
+    rgb(92, 70, 131) 100%);
+}
+.tblList2 thead{
+    background: rgb(60, 37, 87);
+    background: linear-gradient(90deg,
+    rgb(92, 70, 131) 0%,
+    rgba(0, 0, 0, 0.91) 50%,
+    rgb(92, 70, 131) 100%);
+    color: #FFF;
+    width:100%;
+}
+
+.color-icon2 {
+    color: #5c4683;
+}
+.tab2{
+    background: rgb(60, 37, 87);
+    background: linear-gradient(90deg,
+    rgb(92, 70, 131) 0%,
+    rgba(0, 0, 0, 0.91) 50%,
+    rgb(92, 70, 131) 100%);
+    padding: 40px 50px;
+}
+.cart-color2{
+    background-color: #5c4683;
+}
 .img-size {
     max-width: 5vw;
 }
@@ -23,6 +57,12 @@ html, body, .view{
     background-color: #178363;
 }
 .color-icon {
+    color: #178363;
+}
+.adjust1{
+    color: #70169a;
+}
+.adjust2{
     color: #178363;
 }
 
@@ -169,11 +209,6 @@ a:hover,a:focus{
     background-size: cover;
     background-repeat: no-repeat;
     height: 700px;
-}
-.imgWork3{
-    background-image: url("../img/work3.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 .textWork{
     padding-top: 10%;

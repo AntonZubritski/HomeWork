@@ -43,7 +43,7 @@
             <ul class="navbar-nav nav-flex-icons">
                 <li class="nav-item">
                     <a href="cart.html" class="nav-link waves-effect"><!--onclick="cartTransition()"-->
-                        <span class="badge green z-depth-1 mr-1" id="counter">0</span>
+                        <span class=" cart-color badge z-depth-1 mr-1" id="counter">0</span>
                         <i class="fa fa-shopping-cart"></i>
                         <span class="clearfix d-none d-sm-inline-block">Корзина</span>
                     </a>
@@ -67,7 +67,7 @@
                         <input type="password" class=" form-control" id="password" placeholder="Password">
                     </div>
                     <a href="registration.html">Регистрация</a>
-                    <button  type="submit" class="btn green btnClickReg">Войти</button>
+                    <button  type="submit" class="btn cart-color btnClickReg">Войти</button>
                 </form>
             </div>
         </div>
@@ -93,7 +93,11 @@
 </table>
 <div id="contentConteinerFooter"></div>
 
-<footer class="fixed-bottom page-footer text-center font-small wow fadeIn">
+<footer class="page-footer fixed-bottom page-footer-color text-center font-small mt-4 fadeIn">
+    <div>
+        <i class="fa fa-adjust adjust1 mr-3" data-id ="1" id="btnColor1"></i>
+        <i class="fa fa-adjust adjust2 ml-3" data-id ="2" id="btnColor2"></i>
+    </div>
     <hr class="my-4">
     <div class="pb-4">
         <a href="#">
@@ -137,6 +141,8 @@
 <script type="text/javascript" src="js/cart.js"></script>
 <!-- Registration JavaScript -->
 <script type="text/javascript" src="js/registration.js"></script>
+<!-- BtnColor JavaScript -->
+<script type="text/javascript" src="js/colorScript.js"></script>
 
 
 
