@@ -1,5 +1,6 @@
 html, body, .view{
    min-height: 100%;
+
 }
 
 input[type="text"]::placeholder { color: rgba(255, 255, 255, 0.7); }
@@ -34,19 +35,11 @@ input[type="text"]::placeholder { color: rgba(255, 255, 255, 0.7); }
 .color-icon2 {
     color: #5c4683;
 }
-.tab2{
-    background: rgb(60, 37, 87);
-    background: linear-gradient(90deg,
-    rgb(92, 70, 131) 0%,
-    rgba(0, 0, 0, 0.91) 50%,
-    rgb(92, 70, 131) 100%);
-    padding: 40px 50px;
-}
 .cart-color2{
     background-color: #5c4683;
 }
 .img-size {
-    max-width: 5vw;
+    max-width: 81px;
 }
 .form-control{
 
@@ -142,11 +135,6 @@ a:hover,a:focus{
     text-decoration: none;
 }
 .tab{
-    background: rgb(13, 87, 29);
-    background: linear-gradient(70deg,
-    rgb(23, 131, 99) 0%,
-    rgba(0, 0, 0, 0.91) 70%,
-    rgb(23, 131, 99) 100%);
     padding: 40px 50px;
 }
 

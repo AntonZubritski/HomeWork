@@ -2,19 +2,25 @@
 
 let cartCount = [];
 let cartCountStor = "";
-let cartCountStorSplit = 0;
+let cartCountStorSplit = [];
 let container = document.querySelector('#contentContainer');
 let containerFooter = document.getElementById('contentConteinerFooter');
 let numberCartAmount = document.querySelectorAll('.numberCartAmount');
 
 
-let counter = () => {
-    let count = document.getElementById("counter");
-    cartCountStor = localStorage.getItem('Key').replace(/[^,\d;]/g, '');
-    cartCountStorSplit = cartCountStor.split(',');
-    count.innerText = "";
-    count.innerText = cartCountStorSplit[0] === "" && cartCountStorSplit.length == 1 ? "" : cartCountStorSplit.length;
-};
+
+    let counter = () => {
+        if (!localStorage.getItem('Key')) {
+            return
+        }
+        let count = document.getElementById("counter");
+        cartCountStor = localStorage.getItem('Key').replace(/[^,\d;]/g, '');
+        cartCountStorSplit = cartCountStor.split(',');
+        count.innerText = "";
+        count.innerText = cartCountStorSplit[0] === "" && cartCountStorSplit.length == 1 ? "" : cartCountStorSplit.length;
+    };
+
+
 
 const renderTable = () => {
     container.innerHTML = goods.map((good, index) => {
@@ -66,16 +72,13 @@ function listeners() {
 
 
 
-window.onload = function () {
-    counter()
-};
-if (container !== null ) {
-    window.onload = function(){
-        counter();
-        renderTable();
-        listeners()
+    window.onload = function () {
+        counter()
+    };
+    if (container !== null ) {
+        window.onload = function(){
+            counter();
+            renderTable();
+            listeners();
+        }
     }
-}
-
-
-

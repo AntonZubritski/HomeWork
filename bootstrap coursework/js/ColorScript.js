@@ -10,6 +10,7 @@ let tblList = document.querySelector('.tblList');
 let btnGr = document.querySelector('.btn-gr');
 let sliderTitleAll = document.querySelectorAll('.slider-list__item .title__element .title ');
 let sliderFillAll = document.querySelectorAll('.slider-list__item .more__element .content .link .fill');
+let colorIconAll = document.querySelectorAll('.color-icon');
 
 btnColorAll.forEach(btnColor => {
     btnColor.addEventListener('click', function () {
@@ -43,6 +44,12 @@ btnColorAll.forEach(btnColor => {
             navGoods.classList.remove('nav-goods');
             navGoods.classList.add('nav-goods-color2');
 
+            colorIconAll.forEach(colorIcon => {
+                colorIcon.classList.remove('color-icon');
+                colorIcon.classList.add('color-icon2');
+            });
+
+
         }
 
 
@@ -66,8 +73,19 @@ btnColorAll.forEach(btnColor => {
                 sliderTitle.classList.remove('title2');
                 sliderTitle.classList.add('title');
             });
+            if (sliderFillAll !== null) {
+                sliderFillAll.forEach(sliderFill => {
+                    sliderFill.classList.remove('fill-violet');
+                    sliderFill.classList.add('fill-green', 'fill-dark', 'fill-blue')
+                })
+            }
             navGoods.classList.remove('nav-goods-color2');
             navGoods.classList.add('nav-goods');
+
+            colorIconAll.forEach(colorIcon => {
+                colorIcon.classList.remove('color-icon2');
+                colorIcon.classList.add('color-icon1');
+            });
         }
     })
 });

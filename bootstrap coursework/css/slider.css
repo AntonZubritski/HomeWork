@@ -35,24 +35,16 @@
 .slider__arrow:hover {
     opacity: 1;
 }
+
 .slider__arrow_prev {
-    left: 16px;
-    width: 64px;
-    height: 64px;
-    background-image:url(../img/arrow__left-white.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: auto 64px;
+    left: 15px;
+    font-size: 8vw;
 }
 .slider__arrow_next {
-    right: 16px;
-    width: 64px;
-    height: 64px;
-    background-image: url(../img/arrow__right-white.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: auto 64px;
+    right: 15px;
+    font-size: 8vw;
 }
+
 
 .nav-control:hover {
     opacity: 0.8;
