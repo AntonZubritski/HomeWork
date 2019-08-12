@@ -1,0 +1,241 @@
+html, body, .view{
+   min-height: 100%;
+
+}
+
+input[type="text"]::placeholder { color: rgba(255, 255, 255, 0.7); }
+.nav-goods, .page-footer-color{
+    background: rgb(13, 87, 29);
+    background: linear-gradient(90deg,
+    rgb(23, 131, 99) 0%,
+    rgba(0, 0, 0, 0.91) 50%,
+    rgb(23, 131, 99) 100%);
+}
+.cart-color{
+    background-color: #178363;
+}
+
+.nav-goods-color2, .page-footer-color2{
+    background: rgb(60, 37, 87);
+    background: linear-gradient(90deg,
+    rgb(92, 70, 131) 0%,
+    rgba(0, 0, 0, 0.91) 50%,
+    rgb(92, 70, 131) 100%);
+}
+.tblList2 thead{
+    background: rgb(60, 37, 87);
+    background: linear-gradient(90deg,
+    rgb(92, 70, 131) 0%,
+    rgba(0, 0, 0, 0.91) 50%,
+    rgb(92, 70, 131) 100%);
+    color: #FFF;
+    width:100%;
+}
+
+.color-icon2 {
+    color: #5c4683;
+}
+.cart-color2{
+    background-color: #5c4683;
+}
+.img-size {
+    max-width: 81px;
+}
+.form-control{
+
+}
+
+.modal-dialog.modal-notify.modal-primary .badge,
+.modal-dialog.modal-notify.modal-primary .modal-header,
+.pagination.pg-blue .page-item.active .page-link,
+.pagination.pg-blue .page-item.active .page-link:hover,
+.btn-gr{
+    background-color: #178363;
+}
+.color-icon {
+    color: #178363;
+}
+.adjust1{
+    color: #70169a;
+}
+.adjust2{
+    color: #178363;
+}
+
+/*-------------------------Bootstrap + ---------------------------*/
+.m-6 {
+    margin: 4.5rem !important;
+}
+
+.mt-6,
+.my-6 {
+    margin-top: 4.5rem !important;
+}
+
+.mr-6,
+.mx-6 {
+    margin-right: 4.5rem !important;
+}
+
+.mb-6,
+.my-6 {
+    margin-bottom: 4.5rem !important;
+}
+
+.ml-6,
+.mx-6 {
+    margin-left: 4.5rem !important;
+}
+
+.m-7 {
+    margin: 6rem !important;
+}
+
+.mt-7,
+.my-7 {
+    margin-top: 6rem !important;
+}
+.mt-8,
+.my-8 {
+    margin-top: 8rem !important;
+}
+
+.mr-7,
+.mx-7 {
+    margin-right: 6rem !important;
+}
+
+.mb-7,
+.my-7 {
+    margin-bottom: 6rem !important;
+}
+
+.ml-7,
+.mx-7 {
+    margin-left: 6rem !important;
+}
+.pt-7,
+.py-7 {
+    padding-top: 6rem !important;
+}
+.pt-8,
+.py-8 {
+    padding-top: 8rem !important;
+}
+.drop-left{
+    left: -116px;
+}
+.w-2 {
+    max-width: 2%;
+}
+
+/*-----------------------Registration--------------------*/
+a:hover,a:focus{
+    outline: none;
+    text-decoration: none;
+}
+.tab{
+    padding: 40px 50px;
+}
+
+.tab .nav-tabs li a{
+    font-size: 18px;
+    color: #fff;
+    border-radius: 0;
+    text-transform: uppercase;
+    background: transparent;
+    padding: 0;
+    margin-right: 0;
+    border: none;
+    border-bottom: 2px solid transparent;
+    opacity: 0.5;
+    position: relative;
+    transition: all 0.5s ease 0s;
+}
+.tab .nav-tabs li a:hover {
+    background: transparent;
+}
+.tab .nav-tabs li.active a,
+.tab .nav-tabs li.active a:focus,
+.tab .nav-tabs li.active a:hover{
+    border: none;
+    opacity: 1;
+    border-bottom: 2px solid #fffdfe;
+    color: #fff;
+}
+.tab .tab-content{
+    z-index: 1;
+}
+
+@media only screen and (max-width: 479px){
+    .tab{ padding: 40px 20px; }
+}
+
+.dropdown:hover > .dropdown-menu {
+    transition: 5s; /* не работает*/
+}
+
+/*--------------Registration html--------------*/
+.tblList thead{
+    background: rgb(13, 87, 29);
+    background: linear-gradient(30deg,
+    rgb(23, 131, 99) 0%,
+    rgba(0, 0, 0, 0.91) 50%,
+    rgb(23, 131, 99) 100%);
+    color: #FFF;
+    width:100%;
+}
+
+/*--------------Workshop html--------------*/
+.h-work-50{
+    height: 400px;
+}
+.imgWork{
+    background-image: url("../img/work1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.imgWork2{
+    background-image: url("../img/work2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+}
+.textWork{
+    padding-top: 10%;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bolder;
+    transition: 3s;
+    animation: animtext 10s normal ;
+}
+.textWork2{
+    padding-top: 14%;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bolder;
+    transition: 3s;
+    animation: animtext 10s normal ;
+    font-size: 20px;
+
+}
+@keyframes animtext {
+    to{color: rgba(0, 0, 0, 0.5);}
+    from{color: rgba(0, 0, 0, 0);}
+}
+.withBlockWork{
+    min-height: -webkit-fill-available;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/*-------------------------Media-------------------------------*/
+
+@media screen and (max-width: 620px) {
+    .footer_head {
+        display: none;
+    }
+}
+@media screen and (max-width: 991px) {
+    .drop-left{
+        left: 0;
+    }
+}
