@@ -1,0 +1,22 @@
+.section-text{
+    text-align: center;
+    margin: 50px 0;
+}
+.section-text p img{
+    max-width: 200px ;
+}
+
+.block-align{
+    margin: 0 40px 40px 40px;
+}
+
+a{
+    color: white;
+}
+a:focus{
+    color: #856404;
+}
+a:hover{
+    color: #d39e00;
+}
+
